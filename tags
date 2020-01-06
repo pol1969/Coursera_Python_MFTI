@@ -11,6 +11,7 @@ Client	client_my.py	/^class Client:$/;"	c
 ClientError	client.py	/^class ClientError(Exception):$/;"	c
 ClientError	client_my.py	/^class ClientError(Exception):$/;"	c
 ClientProtocolError	client.py	/^class ClientProtocolError(ClientError):$/;"	c
+ClientServerProtocol	server.py	/^class ClientServerProtocol(asyncio.Protocol):$/;"	c
 ClientSocketError	client.py	/^class ClientSocketError(ClientError):$/;"	c
 File	fileobj.py	/^class File:$/;"	c
 FileReader	solution.py	/^class FileReader:$/;"	c
@@ -44,9 +45,12 @@ car_type	sol_car.py	/^    car_type = 'spec_machine'$/;"	v	class:SpecMachine
 car_type	sol_car.py	/^    car_type = 'truck'$/;"	v	class:Truck
 clear	decorator_prim.py	/^def clear():$/;"	f
 close	client.py	/^    def close(self):$/;"	m	class:Client
+connection_made	server.py	/^    def connection_made(self, transport):$/;"	m	class:ClientServerProtocol
+coro	server.py	/^coro = loop.create_server($/;"	v
 createParser	storage.py	/^def createParser():$/;"	f
 data	storage.py	/^            data = json.load(f)$/;"	v
 data	storage.py	/^            data =defaultdict(list)$/;"	v
+data_received	server.py	/^    def data_received(self, data):$/;"	m	class:ClientServerProtocol
 first	comfile.py	/^first = os.path.join(tempfile.gettempdir(), 'first')$/;"	v
 get	client.py	/^    def get(self, key):$/;"	m	class:Client
 get	client_my.py	/^    def get(self, key):$/;"	m	class:Client
@@ -57,6 +61,7 @@ get_data	decorator.py	/^def get_data():$/;"	f
 get_data	decorator_prim.py	/^def get_data():$/;"	f
 get_photo_file_ext	sol_car.py	/^    def get_photo_file_ext(self):$/;"	m	class:CarBase
 inner	decorator.py	/^    def inner(*args, **kwargs ):$/;"	f	function:to_json
+loop	server.py	/^loop = asyncio.get_event_loop()$/;"	v
 namespace	storage.py	/^    namespace = parser.parse_args()$/;"	v
 new_obj	comfile.py	/^new_obj = obj1 + obj2 $/;"	v
 obj	comfile.py	/^obj = File(storage_path)$/;"	v
@@ -71,7 +76,9 @@ put	client_my.py	/^    def put(self, key, value, timestamp=str(int(time.time()))
 put	decorator_prim.py	/^def put(key, value):$/;"	f
 read	fileobj.py	/^    def read(self):$/;"	m	class:File
 read	solution.py	/^    def read(self):$/;"	m	class:FileReader
+run	test_server.py	/^def run(host, port):$/;"	f
 second	comfile.py	/^second = os.path.join(tempfile.gettempdir(),'second')$/;"	v
+server	server.py	/^server = loop.run_until_complete(coro)$/;"	v
 storage_path	comfile.py	/^storage_path = os.path.join(tempfile.gettempdir(),'storage.data')$/;"	v
 storage_path	decorator_prim.py	/^storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
 storage_path	storage.py	/^    storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
