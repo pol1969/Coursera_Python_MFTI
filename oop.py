@@ -1,7 +1,8 @@
 import math
+from abc import ABC, abstractmethod
 
 
-class Base:
+class Base(ABC):
 
     pass
 
