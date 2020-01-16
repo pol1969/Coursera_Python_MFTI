@@ -12,30 +12,47 @@ SCREEN_DIM = (800, 600)
 # Функции для работы с векторами
 # =======================================================================================
 
-def sub(x, y):
-    """"возвращает разность двух векторов"""
-    return x[0] - y[0], x[1] - y[1]
+class Vector():
+    def __init__(self,x, y):
+        self.x = x
+        self.y = y
+
+    @classmethod
+    def fromPoint(cls,point):
+        return cls(point[0],point[1])
+
+    def __sub__(self, other):
+        """"возвращает разность двух векторов"""
+        return self.x - other.x, self.y - other.y
 
 
-def add(x, y):
-    """возвращает сумму двух векторов"""
-    return x[0] + y[0], x[1] + y[1]
+    def __add__(self, other):
+        """возвращает сумму двух векторов"""
+        return self.x + other.x, self.y + other.y
 
 
-def length(x):
-    """возвращает длину вектора"""
-    return math.sqrt(x[0] * x[0] + x[1] * x[1])
+    def __len__(self):
+        """возвращает длину вектора"""
+        return math.sqrt(x * x + y * y)
 
 
-def mul(v, k):
-    """возвращает произведение вектора на число"""
-    return v[0] * k, v[1] * k
+    def mul(self, k):
+        """возвращает произведение вектора на число"""
+        return  self.x * k, self.y * k
 
 
-def vec(x, y):
-    """возвращает пару координат, определяющих вектор (координаты точки конца вектора),
-    координаты начальной точки вектора совпадают с началом системы координат (0, 0)"""
-    return sub(y, x)
+    def vec(x, y):
+        """возвращает пару координат, определяющих вектор (координаты точки конца вектора),
+        координаты начальной точки вектора совпадают с началом системы координат (0, 0)"""
+        return sub(y, x)
+
+    def __str__(self):
+        return str(self.x) + str(self.y)
+    def __repr__(self):
+        return str(self.x) +" "+ str(self.y)
+
+
+
 
 
 # =======================================================================================
@@ -61,7 +78,7 @@ def draw_help():
     font1 = pygame.font.SysFont("courier", 24)
     font2 = pygame.font.SysFont("serif", 24)
     data = []
-    data.append(["F1", "Show Help"])
+    data.append(["H", "Show Help"])
     data.append(["R", "Restart"])
     data.append(["P", "Pause/Play"])
     data.append(["Num+", "More points"])
@@ -87,6 +104,10 @@ def get_point(points, alpha, deg=None):
     if deg == 0:
         return points[0]
     return add(mul(points[deg], alpha), mul(get_point(points, alpha, deg - 1), 1 - alpha))
+    
+    return points[deg] * alpha +  get_point(points, alpha, deg - 1) * (1 - alpha)
+
+    
 
 
 def get_points(base_points, count):
@@ -103,9 +124,10 @@ def get_knot(points, count):
     res = []
     for i in range(-2, len(points) - 2):
         ptn = []
-        ptn.append(mul(add(points[i], points[i + 1]), 0.5))
+        ptn.append((Vector.fromPoint((Vector.fromPoint(points[i]) + 
+                   Vector.fromPoint(points[i + 1])))) * 0.5)
         ptn.append(points[i + 1])
-        ptn.append(mul(add(points[i + 1], points[i + 2]), 0.5))
+ #       ptn.append((points[i + 1] + points[i + 2]) * 0.5)
 
         res.extend(get_points(ptn, count))
     return res
@@ -114,7 +136,8 @@ def get_knot(points, count):
 def set_points(points, speeds):
     """функция перерасчета координат опорных точек"""
     for p in range(len(points)):
-        points[p] = add(points[p], speeds[p])
+#        import pdb; pdb.set_trace()
+        points[p] = Vector.fromPoint(point[p]) + Vector.fromPoint(speeds[p])
         if points[p][0] > SCREEN_DIM[0] or points[p][0] < 0:
             speeds[p] = (- speeds[p][0], speeds[p][1])
         if points[p][1] > SCREEN_DIM[1] or points[p][1] < 0:
@@ -144,7 +167,7 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 working = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_q:
                     working = False
                 if event.key == pygame.K_r:
                     points = []
@@ -153,7 +176,7 @@ if __name__ == "__main__":
                     pause = not pause
                 if event.key == pygame.K_KP_PLUS:
                     steps += 1
-                if event.key == pygame.K_F1:
+                if event.key == pygame.K_h:
                     show_help = not show_help
                 if event.key == pygame.K_KP_MINUS:
                     steps -= 1 if steps > 1 else 0
