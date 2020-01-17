@@ -124,10 +124,10 @@ def get_knot(points, count):
     res = []
     for i in range(-2, len(points) - 2):
         ptn = []
-        ptn.append((Vector.fromPoint((Vector.fromPoint(points[i]) + 
-                   Vector.fromPoint(points[i + 1])))) * 0.5)
+        ptn.append((Vector.fromPoint((points[i]) + (points[i + 1]))) * 0.5)
         ptn.append(points[i + 1])
- #       ptn.append((points[i + 1] + points[i + 2]) * 0.5)
+        ptn.append(Vector.fromPoint(points[i + 1] + points[i + 2]) * 0.5)
+        
 
         res.extend(get_points(ptn, count))
     return res
