@@ -36,7 +36,7 @@ class Vector():
         return math.sqrt(x * x + y * y)
 
 
-    def mul(self, k):
+    def __mul__(self, k):
         """возвращает произведение вектора на число"""
         return  self.x * k, self.y * k
 
@@ -103,7 +103,7 @@ def get_point(points, alpha, deg=None):
         deg = len(points) - 1
     if deg == 0:
         return points[0]
-    return add(mul(points[deg], alpha), mul(get_point(points, alpha, deg - 1), 1 - alpha))
+#    return add(mul(points[deg], alpha), mul(get_point(points, alpha, deg - 1), 1 - alpha))
     
     return points[deg] * alpha +  get_point(points, alpha, deg - 1) * (1 - alpha)
 
@@ -137,7 +137,7 @@ def set_points(points, speeds):
     """функция перерасчета координат опорных точек"""
     for p in range(len(points)):
 #        import pdb; pdb.set_trace()
-        points[p] = Vector.fromPoint(point[p]) + Vector.fromPoint(speeds[p])
+        points[p] = Vector.fromPoint(points[p]) + Vector.fromPoint(speeds[p])
         if points[p][0] > SCREEN_DIM[0] or points[p][0] < 0:
             speeds[p] = (- speeds[p][0], speeds[p][1])
         if points[p][1] > SCREEN_DIM[1] or points[p][1] < 0:
