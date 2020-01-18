@@ -12,7 +12,7 @@ SCREEN_DIM = (800, 600)
 # Функции для работы с векторами
 # =======================================================================================
 
-class Vector():
+class Vec2d():
     def __init__(self,x, y):
         self.x = x
         self.y = y
@@ -25,24 +25,24 @@ class Vector():
         """"возвращает разность двух векторов"""
         a = self.x - other.x
         b = self.y - other.y
-        return Vector(a, b)
+        return Vec2d(a, b)
 
 
     def __add__(self, other):
         """возвращает сумму двух векторов"""
         a = self.x + other.x
         b = self.y + other.y
-        return Vector(a, b)
+        return Vec2d(a, b)
 
 
     def __len__(self):
         """возвращает длину вектора"""
-        return math.sqrt(x * x + y * y)
+        return math.sqrt(self.x * self.x + self.y * self.y)
 
 
     def __mul__(self, k):
         """возвращает произведение вектора на число"""
-        return  Vector(self.x * k, self.y * k)
+        return  Vec2d(self.x * k, self.y * k)
 
     def __getitem__(self,key):
         if key == 0:
@@ -50,14 +50,12 @@ class Vector():
         if key == 1:
             return self.y
 
-
-    def vec(x, y):
-        """возвращает пару координат, определяющих вектор (координаты точки конца вектора),
-        координаты начальной точки вектора совпадают с началом системы координат (0, 0)"""
-        return sub(y, x)
+    def int_pair(self):
+        return (self.x, self.y)
 
     def __str__(self):
         return str(self.x) + str(self.y)
+    
     def __repr__(self):
         return str(self.x) +" "+ str(self.y)
 
@@ -135,7 +133,7 @@ def get_point(points, alpha, deg=None):
         deg = len(points) - 1
     if deg == 0:
         return points[0]
-    return Vector.fromPoint(points[deg]) * alpha + Vector.fromPoint(get_point(points, alpha, deg - 1)) * (1 - alpha)
+    return Vec2d.fromPoint(points[deg]) * alpha + Vec2d.fromPoint(get_point(points, alpha, deg - 1)) * (1 - alpha)
 
 def get_points(base_points, count):
     alpha = 1 / count
@@ -151,9 +149,9 @@ def get_knot(points, count):
     res = []
     for i in range(-2, len(points) - 2):
         ptn = []
-        ptn.append((Vector.fromPoint(points[i]) + Vector.fromPoint(points[i + 1])) * 0.5)
+        ptn.append((Vec2d.fromPoint(points[i]) + Vec2d.fromPoint(points[i + 1])) * 0.5)
         ptn.append(points[i + 1])
-        ptn.append((Vector.fromPoint(points[i + 1]) + Vector.fromPoint(points[i + 2])) * 0.5)
+        ptn.append((Vec2d.fromPoint(points[i + 1]) + Vec2d.fromPoint(points[i + 2])) * 0.5)
 
         res.extend(get_points(ptn, count))
     return res
@@ -162,7 +160,7 @@ def get_knot(points, count):
 def set_points(points, speeds):
     """функция перерасчета координат опорных точек"""
     for p in range(len(points)):
-        points[p] = Vector.fromPoint(points[p]) + Vector.fromPoint(speeds[p])
+        points[p] = Vec2d.fromPoint(points[p]) + Vec2d.fromPoint(speeds[p])
         if points[p][0] > SCREEN_DIM[0] or points[p][0] < 0:
             speeds[p] = (- speeds[p][0], speeds[p][1])
         if points[p][1] > SCREEN_DIM[1] or points[p][1] < 0:

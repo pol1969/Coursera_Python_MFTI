@@ -25,13 +25,14 @@ SpecMachine	DivingIntoPython/sol_car.py	/^class SpecMachine(CarBase):$/;"	c
 TestFactorize	factorize.py	/^class TestFactorize(unittest.TestCase):$/;"	c
 Truck	DivingIntoPython/sol_car.py	/^class Truck(CarBase):$/;"	c
 Value	DivingIntoPython/descriptor.py	/^class Value:$/;"	c
+Vec2d	screen.py	/^class Vec2d():$/;"	c
 Vector	newfile.py	/^class Vector():$/;"	c
-Vector	screen.py	/^class Vector():$/;"	c
 __add__	DivingIntoPython/fileobj.py	/^    def __add__(self, obj):$/;"	m	class:File	file:
 __add__	newfile.py	/^    def __add__(self, other):$/;"	m	class:Vector	file:
-__add__	screen.py	/^    def __add__(self, other):$/;"	m	class:Vector	file:
+__add__	screen.py	/^    def __add__(self, other):$/;"	m	class:Vec2d	file:
 __get__	DivingIntoPython/descriptor.py	/^    def __get__(self, obj, obj_type):$/;"	m	class:Value	file:
 __getitem__	newfile.py	/^    def __getitem__(self,key):$/;"	m	class:Vector	file:
+__getitem__	screen.py	/^    def __getitem__(self,key):$/;"	m	class:Vec2d	file:
 __init__	DivingIntoPython/client.py	/^    def __init__(self, host, port, timeout=None):$/;"	m	class:Client
 __init__	DivingIntoPython/client_my.py	/^    def __init__(self, host, port, timeout=2):$/;"	m	class:Client
 __init__	DivingIntoPython/client_my.py	/^    def __init__(self, text):$/;"	m	class:ClientError
@@ -44,24 +45,24 @@ __init__	DivingIntoPython/sol_car.py	/^    def __init__(self, brand, photo_file_
 __init__	DivingIntoPython/solution.py	/^    def __init__(self, path):$/;"	m	class:FileReader
 __init__	newfile.py	/^    def __init__(self,x, y):$/;"	m	class:Vector
 __init__	oop.py	/^    def __init__(self, data, result):$/;"	m	class:Base
-__init__	screen.py	/^    def __init__(self,x, y):$/;"	m	class:Vector
+__init__	screen.py	/^    def __init__(self,x, y):$/;"	m	class:Vec2d
 __iter__	DivingIntoPython/fileobj.py	/^    def __iter__(self):$/;"	m	class:File	file:
 __len__	newfile.py	/^    def __len__(self):$/;"	m	class:Vector	file:
-__len__	screen.py	/^    def __len__(self):$/;"	m	class:Vector	file:
+__len__	screen.py	/^    def __len__(self):$/;"	m	class:Vec2d	file:
 __mul__	newfile.py	/^    def __mul__(self, k):$/;"	m	class:Vector	file:
-__mul__	screen.py	/^    def __mul__(self, k):$/;"	m	class:Vector	file:
+__mul__	screen.py	/^    def __mul__(self, k):$/;"	m	class:Vec2d	file:
 __next__	DivingIntoPython/fileobj.py	/^    def __next__(self):$/;"	m	class:File	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Car	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:SpecMachine	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Truck	file:
 __repr__	newfile.py	/^    def __repr__(self):$/;"	m	class:Vector	file:
-__repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Vector	file:
+__repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Vec2d	file:
 __set__	DivingIntoPython/descriptor.py	/^    def __set__(self, obj, value):$/;"	m	class:Value	file:
 __str__	DivingIntoPython/fileobj.py	/^    def __str__(self):$/;"	m	class:File	file:
 __str__	newfile.py	/^    def __str__(self):$/;"	m	class:Vector	file:
-__str__	screen.py	/^    def __str__(self):$/;"	m	class:Vector	file:
+__str__	screen.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
 __sub__	newfile.py	/^    def __sub__(self, other):$/;"	m	class:Vector	file:
-__sub__	screen.py	/^    def __sub__(self, other):$/;"	m	class:Vector	file:
+__sub__	screen.py	/^    def __sub__(self, other):$/;"	m	class:Vec2d	file:
 _main	DivingIntoPython/client.py	/^def _main():$/;"	f
 _read	DivingIntoPython/client.py	/^    def _read(self):$/;"	m	class:Client
 answer	DivingIntoPython/server.py	/^answer = dict()$/;"	v
@@ -83,7 +84,7 @@ draw_points	screen.py	/^def draw_points(points, style="points", width=3, color=(
 factorize	t.py	/^def factorize(n):$/;"	f
 first	DivingIntoPython/comfile.py	/^first = os.path.join(tempfile.gettempdir(), 'first')$/;"	v
 fromPoint	newfile.py	/^    def fromPoint(cls,p):$/;"	m	class:Vector
-fromPoint	screen.py	/^    def fromPoint(cls,point):$/;"	m	class:Vector
+fromPoint	screen.py	/^    def fromPoint(cls,p):$/;"	m	class:Vec2d
 get	DivingIntoPython/client.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/client_my.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/decorator_prim.py	/^def get(key):$/;"	f
@@ -110,6 +111,7 @@ get_score	oop.py	/^    def get_score(self):$/;"	m	class:B
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:Base
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:C
 inner	DivingIntoPython/decorator.py	/^    def inner(*args, **kwargs ):$/;"	f	function:to_json
+int_pair	screen.py	/^    def int_pair(self):$/;"	m	class:Vec2d
 namespace	DivingIntoPython/storage.py	/^    namespace = parser.parse_args()$/;"	v
 new_obj	DivingIntoPython/comfile.py	/^new_obj = obj1 + obj2 $/;"	v
 obj	DivingIntoPython/comfile.py	/^obj = File(storage_path)$/;"	v
@@ -141,5 +143,4 @@ test_wrong_types_raise_exception	factorize.py	/^    def test_wrong_types_raise_e
 test_zero_and_one_cases	factorize.py	/^    def test_zero_and_one_cases(self):$/;"	m	class:TestFactorize
 to_json	DivingIntoPython/decorator.py	/^def to_json(func):$/;"	f
 vec	newfile.py	/^    def vec(x, y):$/;"	m	class:Vector
-vec	screen.py	/^    def vec(x, y):$/;"	m	class:Vector
 write	DivingIntoPython/fileobj.py	/^    def write(self, content):$/;"	m	class:File
