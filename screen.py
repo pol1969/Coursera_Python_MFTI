@@ -59,32 +59,6 @@ class Vec2d():
     def __repr__(self):
         return str(self.x) +" "+ str(self.y)
 
-#def sub(x, y):
-#    """"возвращает разность двух векторов"""
-#    return x[0] - y[0], x[1] - y[1]
-#
-#
-#def add(x, y):
-#    """возвращает сумму двух векторов"""
-#    return x[0] + y[0], x[1] + y[1]
-#
-#
-#def length(x):
-#    """возвращает длину вектора"""
-#    return math.sqrt(x[0] * x[0] + x[1] * x[1])
-#
-#
-#def mul(v, k):
-#    """возвращает произведение вектора на число"""
-#    return v[0] * k, v[1] * k
-#
-#
-#def vec(x, y):
-#    """возвращает пару координат, определяющих вектор (координаты точки конца вектора),
-#    координаты начальной точки вектора совпадают с началом системы координат (0, 0)"""
-#    return sub(y, x)
-
-
 # =======================================================================================
 # Функции отрисовки
 # =======================================================================================
@@ -133,11 +107,15 @@ def get_point(points, alpha, deg=None):
         deg = len(points) - 1
     if deg == 0:
         return points[0]
+   # import pdb; pdb.set_trace()
+    
     return Vec2d.fromPoint(points[deg]) * alpha + Vec2d.fromPoint(get_point(points, alpha, deg - 1)) * (1 - alpha)
 
 def get_points(base_points, count):
     alpha = 1 / count
     res = []
+
+    import pdb; pdb.set_trace()
     for i in range(count):
         res.append(get_point(base_points, i * alpha))
     return res
@@ -149,6 +127,7 @@ def get_knot(points, count):
     res = []
     for i in range(-2, len(points) - 2):
         ptn = []
+    #    import pdb; pdb.set_trace()
         ptn.append((Vec2d.fromPoint(points[i]) + Vec2d.fromPoint(points[i + 1])) * 0.5)
         ptn.append(points[i + 1])
         ptn.append((Vec2d.fromPoint(points[i + 1]) + Vec2d.fromPoint(points[i + 2])) * 0.5)
