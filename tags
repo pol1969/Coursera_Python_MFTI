@@ -19,8 +19,11 @@ ClientServerProtocol	DivingIntoPython/server.py	/^class ClientServerProtocol(asy
 ClientSocketError	DivingIntoPython/client.py	/^class ClientSocketError(ClientError):$/;"	c
 File	DivingIntoPython/fileobj.py	/^class File:$/;"	c
 FileReader	DivingIntoPython/solution.py	/^class FileReader:$/;"	c
+Knot	screen.py	/^class Knot(Polyline):$/;"	c
+Polyline	screen.py	/^class Polyline():$/;"	c
 SCREEN_DIM	newfile.py	/^SCREEN_DIM = (800, 600)$/;"	v
 SCREEN_DIM	screen.py	/^SCREEN_DIM = (800, 600)$/;"	v
+SCREEN_DIM	tmp/screen.py	/^SCREEN_DIM = (800, 600)$/;"	v
 SpecMachine	DivingIntoPython/sol_car.py	/^class SpecMachine(CarBase):$/;"	c
 TestFactorize	factorize.py	/^class TestFactorize(unittest.TestCase):$/;"	c
 Truck	DivingIntoPython/sol_car.py	/^class Truck(CarBase):$/;"	c
@@ -30,6 +33,8 @@ Vector	newfile.py	/^class Vector():$/;"	c
 __add__	DivingIntoPython/fileobj.py	/^    def __add__(self, obj):$/;"	m	class:File	file:
 __add__	newfile.py	/^    def __add__(self, other):$/;"	m	class:Vector	file:
 __add__	screen.py	/^    def __add__(self, other):$/;"	m	class:Vec2d	file:
+__add__	screen.py	/^    def __add__(self,p):$/;"	m	class:Knot	file:
+__add__	screen.py	/^    def __add__(self,p):$/;"	m	class:Polyline	file:
 __get__	DivingIntoPython/descriptor.py	/^    def __get__(self, obj, obj_type):$/;"	m	class:Value	file:
 __getitem__	newfile.py	/^    def __getitem__(self,key):$/;"	m	class:Vector	file:
 __getitem__	screen.py	/^    def __getitem__(self,key):$/;"	m	class:Vec2d	file:
@@ -45,6 +50,8 @@ __init__	DivingIntoPython/sol_car.py	/^    def __init__(self, brand, photo_file_
 __init__	DivingIntoPython/solution.py	/^    def __init__(self, path):$/;"	m	class:FileReader
 __init__	newfile.py	/^    def __init__(self,x, y):$/;"	m	class:Vector
 __init__	oop.py	/^    def __init__(self, data, result):$/;"	m	class:Base
+__init__	screen.py	/^    def __init__(self):$/;"	m	class:Polyline
+__init__	screen.py	/^    def __init__(self, count):$/;"	m	class:Knot
 __init__	screen.py	/^    def __init__(self,x, y):$/;"	m	class:Vec2d
 __iter__	DivingIntoPython/fileobj.py	/^    def __iter__(self):$/;"	m	class:File	file:
 __len__	newfile.py	/^    def __len__(self):$/;"	m	class:Vector	file:
@@ -56,15 +63,19 @@ __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Car	f
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:SpecMachine	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Truck	file:
 __repr__	newfile.py	/^    def __repr__(self):$/;"	m	class:Vector	file:
+__repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Polyline	file:
 __repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Vec2d	file:
 __set__	DivingIntoPython/descriptor.py	/^    def __set__(self, obj, value):$/;"	m	class:Value	file:
 __str__	DivingIntoPython/fileobj.py	/^    def __str__(self):$/;"	m	class:File	file:
 __str__	newfile.py	/^    def __str__(self):$/;"	m	class:Vector	file:
+__str__	screen.py	/^    def __str__(self):$/;"	m	class:Polyline	file:
 __str__	screen.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
 __sub__	newfile.py	/^    def __sub__(self, other):$/;"	m	class:Vector	file:
 __sub__	screen.py	/^    def __sub__(self, other):$/;"	m	class:Vec2d	file:
 _main	DivingIntoPython/client.py	/^def _main():$/;"	f
 _read	DivingIntoPython/client.py	/^    def _read(self):$/;"	m	class:Client
+add	screen.py	/^def add(x, y):$/;"	f
+add	tmp/screen.py	/^def add(x, y):$/;"	f
 answer	DivingIntoPython/server.py	/^answer = dict()$/;"	v
 args	DivingIntoPython/decorator_prim.py	/^    args = parser.parse_args()$/;"	v
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'car'$/;"	v	class:Car
@@ -72,6 +83,7 @@ car_type	DivingIntoPython/sol_car.py	/^    car_type = 'spec_machine'$/;"	v	class
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'truck'$/;"	v	class:Truck
 clear	DivingIntoPython/decorator_prim.py	/^def clear():$/;"	f
 close	DivingIntoPython/client.py	/^    def close(self):$/;"	m	class:Client
+color	screen.py	/^    color = pygame.Color(0)$/;"	v
 connection_made	DivingIntoPython/server.py	/^    def connection_made(self, transport):$/;"	m	class:ClientServerProtocol
 createParser	DivingIntoPython/storage.py	/^def createParser():$/;"	f
 data	DivingIntoPython/storage.py	/^            data = json.load(f)$/;"	v
@@ -79,12 +91,17 @@ data	DivingIntoPython/storage.py	/^            data =defaultdict(list)$/;"	v
 data_received	DivingIntoPython/server.py	/^    def data_received(self, data):$/;"	m	class:ClientServerProtocol
 draw_help	newfile.py	/^def draw_help():$/;"	f
 draw_help	screen.py	/^def draw_help():$/;"	f
+draw_help	tmp/screen.py	/^def draw_help():$/;"	f
 draw_points	newfile.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
+draw_points	screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Knot
+draw_points	screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Polyline
 draw_points	screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
+draw_points	tmp/screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
 factorize	t.py	/^def factorize(n):$/;"	f
 first	DivingIntoPython/comfile.py	/^first = os.path.join(tempfile.gettempdir(), 'first')$/;"	v
 fromPoint	newfile.py	/^    def fromPoint(cls,p):$/;"	m	class:Vector
 fromPoint	screen.py	/^    def fromPoint(cls,p):$/;"	m	class:Vec2d
+gameDisplay	screen.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
 get	DivingIntoPython/client.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/client_my.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/decorator_prim.py	/^def get(key):$/;"	f
@@ -94,33 +111,51 @@ get_car_list	DivingIntoPython/sol_car.py	/^def get_car_list(csv_filename):$/;"	f
 get_data	DivingIntoPython/decorator.py	/^def get_data():$/;"	f
 get_data	DivingIntoPython/decorator_prim.py	/^def get_data():$/;"	f
 get_knot	newfile.py	/^def get_knot(points, count):$/;"	f
+get_knot	screen.py	/^    def get_knot(self, count):$/;"	m	class:Knot
 get_knot	screen.py	/^def get_knot(points, count):$/;"	f
+get_knot	tmp/screen.py	/^def get_knot(points, count):$/;"	f
 get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:A
 get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:B
 get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:Base
 get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:C
 get_photo_file_ext	DivingIntoPython/sol_car.py	/^    def get_photo_file_ext(self):$/;"	m	class:CarBase
 get_point	newfile.py	/^def get_point(points, alpha, deg=None):$/;"	f
+get_point	screen.py	/^    def get_point(self,points, alpha, deg=None):$/;"	m	class:Knot
 get_point	screen.py	/^def get_point(points, alpha, deg=None):$/;"	f
+get_point	tmp/screen.py	/^def get_point(points, alpha, deg=None):$/;"	f
 get_points	newfile.py	/^def get_points(base_points, count):$/;"	f
+get_points	screen.py	/^    def get_points(self,base_points, count):$/;"	m	class:Knot
 get_points	screen.py	/^def get_points(base_points, count):$/;"	f
+get_points	tmp/screen.py	/^def get_points(base_points, count):$/;"	f
 get_pre	oop.py	/^    def get_pre(self):$/;"	m	class:B
 get_rec	oop.py	/^    def get_rec(self):$/;"	m	class:B
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:A
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:B
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:Base
 get_score	oop.py	/^    def get_score(self):$/;"	m	class:C
+hue	screen.py	/^        hue = (hue + 1) % 360$/;"	v
+hue	screen.py	/^    hue = 0$/;"	v
 inner	DivingIntoPython/decorator.py	/^    def inner(*args, **kwargs ):$/;"	f	function:to_json
 int_pair	screen.py	/^    def int_pair(self):$/;"	m	class:Vec2d
+k	screen.py	/^    k = Knot(steps)$/;"	v
+length	screen.py	/^def length(x):$/;"	f
+length	tmp/screen.py	/^def length(x):$/;"	f
+mul	screen.py	/^def mul(v, k):$/;"	f
+mul	tmp/screen.py	/^def mul(v, k):$/;"	f
 namespace	DivingIntoPython/storage.py	/^    namespace = parser.parse_args()$/;"	v
 new_obj	DivingIntoPython/comfile.py	/^new_obj = obj1 + obj2 $/;"	v
 obj	DivingIntoPython/comfile.py	/^obj = File(storage_path)$/;"	v
 obj1	DivingIntoPython/comfile.py	/^obj1 = File(first)$/;"	v
 obj2	DivingIntoPython/comfile.py	/^obj2 = File(second)$/;"	v
+p	screen.py	/^    p = Polyline()$/;"	v
 parse_data	DivingIntoPython/client_my.py	/^    def parse_data(self,data):$/;"	m	class:Client
 parser	DivingIntoPython/decorator_prim.py	/^    parser = argparse.ArgumentParser()$/;"	v
 parser	DivingIntoPython/storage.py	/^    parser = createParser()$/;"	v
+pause	screen.py	/^                    pause = not pause$/;"	v
+pause	screen.py	/^    pause = True$/;"	v
 pid	DivingIntoPython/pid.py	/^pid = os.getpid()$/;"	v
+points	screen.py	/^                    points = []$/;"	v
+points	screen.py	/^    points = []$/;"	v
 process_data	DivingIntoPython/server.py	/^    def process_data(self, data):$/;"	m	class:ClientServerProtocol
 put	DivingIntoPython/client.py	/^    def put(self, key, value, timestamp=None):$/;"	m	class:Client
 put	DivingIntoPython/client_my.py	/^    def put(self, key, value, timestamp=str(int(time.time()))):$/;"	m	class:Client
@@ -131,10 +166,19 @@ run	DivingIntoPython/test_server.py	/^def run(host, port):$/;"	f
 run_server	DivingIntoPython/server.py	/^def run_server(host, port):$/;"	f
 second	DivingIntoPython/comfile.py	/^second = os.path.join(tempfile.gettempdir(),'second')$/;"	v
 set_points	newfile.py	/^def set_points(points, speeds):$/;"	f
+set_points	screen.py	/^    def set_points(self):$/;"	m	class:Polyline
 set_points	screen.py	/^def set_points(points, speeds):$/;"	f
+set_points	tmp/screen.py	/^def set_points(points, speeds):$/;"	f
+show_help	screen.py	/^                    show_help = not show_help$/;"	v
+show_help	screen.py	/^    show_help = False$/;"	v
+speeds	screen.py	/^                    speeds = []$/;"	v
+speeds	screen.py	/^    speeds = []$/;"	v
+steps	screen.py	/^    steps = 35$/;"	v
 storage_path	DivingIntoPython/comfile.py	/^storage_path = os.path.join(tempfile.gettempdir(),'storage.data')$/;"	v
 storage_path	DivingIntoPython/decorator_prim.py	/^storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
 storage_path	DivingIntoPython/storage.py	/^    storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
+sub	screen.py	/^def sub(x, y):$/;"	f
+sub	tmp/screen.py	/^def sub(x, y):$/;"	f
 test_many_multipliers	factorize.py	/^    def test_many_multipliers(self):$/;"	m	class:TestFactorize
 test_negative	factorize.py	/^    def test_negative(self):$/;"	m	class:TestFactorize
 test_simple_numbers	factorize.py	/^    def test_simple_numbers(self):$/;"	m	class:TestFactorize
@@ -143,4 +187,9 @@ test_wrong_types_raise_exception	factorize.py	/^    def test_wrong_types_raise_e
 test_zero_and_one_cases	factorize.py	/^    def test_zero_and_one_cases(self):$/;"	m	class:TestFactorize
 to_json	DivingIntoPython/decorator.py	/^def to_json(func):$/;"	f
 vec	newfile.py	/^    def vec(x, y):$/;"	m	class:Vector
+vec	screen.py	/^def vec(x, y):$/;"	f
+vec	tmp/screen.py	/^def vec(x, y):$/;"	f
+working	screen.py	/^                    working = False$/;"	v
+working	screen.py	/^                working = False$/;"	v
+working	screen.py	/^    working = True$/;"	v
 write	DivingIntoPython/fileobj.py	/^    def write(self, content):$/;"	m	class:File
