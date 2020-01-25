@@ -195,7 +195,6 @@ def draw_help():
     data.append(["Num-", "Less points"])
     data.append(["i", "increase speed"])
     data.append(["d", "decrease speed"])
-    data.append(["Num-", "Less points"])
     data.append(["", ""])
     data.append([str(steps), "Current points"])
     pygame.draw.lines(gameDisplay, (255, 50, 50, 255), True, [
@@ -230,7 +229,7 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 working = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_q:
+                if event.key == pygame.K_ESCAPE:
                     working = False
                 if event.key == pygame.K_r:
                     points = []
