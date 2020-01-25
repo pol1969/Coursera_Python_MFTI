@@ -177,7 +177,7 @@ if __name__ == "__main__":
     gameDisplay = pygame.display.set_mode(SCREEN_DIM)
     pygame.display.set_caption("MyScreenSaver")
 
-    steps = 35
+    steps =2 
     working = True
     points = []
     speeds = []
@@ -192,7 +192,7 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 working = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_q:
                     working = False
                 if event.key == pygame.K_r:
                     points = []
