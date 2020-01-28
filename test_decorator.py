@@ -43,6 +43,56 @@ class Hero:
 # AbstractNegative, Berserk, Blessing, Curse, EvilEye, Weakness из вашего
 # решения
 # =============================================================================
+
+class AbstractEffect(ABC, Hero):
+    def __init__(self, obj):
+        self.obj = obj
+
+    def get_positive_effects(self):
+        return self.obj.positive_effects.copy()
+
+    def get_negative_effects(self):
+        return self.obj.negative_effects.copy()
+
+    def get_stats(self):
+        return self.obj.stats.copy()
+
+
+class AbstractPositive(ABC,AbstractEffect):
+    def get_positive_effects(self):
+        return self.obj.positive_effects.copy()
+
+
+class AbstractNegative(ABC, AbstractEffect):
+    def get_negative_effects(self):
+        return self.obj.negative_effects.copy()
+
+
+class Berserk(AbstractPositive):
+    def __init__(self, obj):
+        self.obj = obj
+        self.positive_effects = []
+        self.negative_effects = []
+        self.positive_effects = \
+                self.obj.get_positive_effects()
+        self.negative_effects = \
+                self.obj.get_negative_effects()
+        self.positive_effects.append("Berserk")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # конец секции ВАШ КОД
 # =============================================================================
 
