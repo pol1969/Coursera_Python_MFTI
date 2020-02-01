@@ -1,21 +1,48 @@
 from test_decorator import *
+
+def visio(d):
+    print(d.__class__.__name__)
+    print(d.get_stats())
+    print(d.get_positive_effects())
+    print(d.get_negative_effects())
+
+
 h = Hero()
-#print("h.get_stats()",h.get_stats())
+print("h = Hero()")
+visio(h)
+
+#e = EvilEye(h)
+#visio(e)
+#
+#e1 = EvilEye(e)
+#visio(e1)
+#
+#e2 = EvilEye(e1)
+#visio(e2)
+#
+#e2.base = e
+#visio(e2)
+#
+#b = Blessing(e2)
+#visio(b)
+#
+#b.base = h
+#visio(b)
+#
+
+
+
 b = Berserk(h)
-#print("Berserk get_stats ",b.get_stats())
-#print("Berserk get_positive_effects ",b.get_positive_effects())
+visio(b)
+
 b2 = Berserk(b)
-#print("B2 get_stats()",b2.get_stats())
-#print("B2 get_positive_effects ",b2.get_positive_effects())
+visio(b2)
 
-print(f"before assignment") 
+b3 = Berserk(b2)
+visio(b3)
 
-print("b2.get_stats()",b2.get_stats())
-print("b2.get_positive_effects()",b2.get_positive_effects())
+b3.base = b 
+visio(b3)
 
-b2.base = h
-print(f"after assignment") 
 
-print("b2.get_stats()",b2.get_stats())
-print("b2.get_positive_effects()",b2.get_positive_effects())
 
