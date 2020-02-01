@@ -45,49 +45,121 @@ class Hero:
 # =============================================================================
 
 class AbstractEffect(ABC, Hero):
-    def __init__(self, obj):
-        self.obj = obj
-
-    def get_positive_effects(self):
-        return self.obj.positive_effects.copy()
-
-    def get_negative_effects(self):
-        return self.obj.negative_effects.copy()
-
+    @abstractmethod
+    def __init__(self, base):
+        self.base = base
+        self.positive_effects = \
+                self.base.get_positive_effects()
+        self.negative_effects = \
+                self.base.get_negative_effects()
+        self.stats = self.base.stats.copy()
+ 
     def get_stats(self):
-        return self.obj.stats.copy()
+        self.stats = self.base.stats.copy()
+        self._add()
+        return self.stats.copy()
+    
+    @abstractmethod
+    def _add(self):
+        pass
 
 
-class AbstractPositive(ABC,AbstractEffect):
+class AbstractPositive(AbstractEffect):
+    
     def get_positive_effects(self):
-        return self.obj.positive_effects.copy()
+        self.positive_effects = \
+                self.base.positive_effects.copy()
+        self.positive_effects.append(self.name)
+        return self.positive_effects.copy()
 
-
-class AbstractNegative(ABC, AbstractEffect):
     def get_negative_effects(self):
-        return self.obj.negative_effects.copy()
+        self.negative_effects = \
+                self.base.negative_effects.copy()
+        return self.negative_effects.copy()
+
+
+class AbstractNegative(AbstractEffect):
+    def get_negative_effects(self):
+        self.negative_effects =\
+                self.base.negative_effects.copy()
+        self.negative_effects.append(self.name)
+        return self.negative_effects.copy()
+
+    def get_positive_effects(self):
+        self.positive_effects = \
+                self.base.positive_effects.copy()
+        return self.positive_effects.copy() 
+
 
 
 class Berserk(AbstractPositive):
-    def __init__(self, obj):
-        self.obj = obj
-        self.positive_effects = []
-        self.negative_effects = []
-        self.positive_effects = \
-                self.obj.get_positive_effects()
-        self.negative_effects = \
-                self.obj.get_negative_effects()
-        self.positive_effects.append("Berserk")
+    def __init__(self, base):
+        AbstractPositive.__init__(self,base)
+        self.name = __class__.__name__
+        self.positive_effects.append(self.name)
+        self._add()
+
+    def _add(self):  
+        self.stats["Strength"] += 7
+        self.stats["Endurance"] += 7
+        self.stats["Agility"] += 7
+        self.stats["Luck"] += 7
+        self.stats["Perception"] -= 3
+        self.stats["Charisma"] -= 3
+        self.stats["Intelligence"] -= 3
+        self.stats["HP"] += 50
+
+
+class Blessing(AbstractPositive):
+    def __init__(self, base):
+        AbstractPositive.__init__(self,base)
+        self.name = __class__.__name__
+        self.positive_effects.append(self.name)
+        self._add()
+
+    def _add(self):
+       for key, value in self.stats.items():
+            if len(key) > 3:
+                self.stats[key] = (value-2)
+
+
+class Weakness(AbstractNegative):
+    def __init__(self, base):
+        AbstractNegative.__init__(self,base)
+        self.name = __class__.__name__
+        self.negative_effects.append(self.name)
+        self._add()
+
+    def _add(self):
+        self.stats["Strength"] -= 4
+        self.stats["Endurance"] -= 4
+        self.stats["Agility"] -= 4
 
 
 
+class EvilEye(AbstractNegative):
+    def __init__(self, base):
+        AbstractNegative.__init__(self,base)
+        self.name = __class__.__name__
+        self.negative_effects.append(self.name)
+        self._add()
+
+    def _add(self):
+        self.stats["Luck"] -= 10
 
 
+ 
+class Curse(AbstractNegative):
+    def __init__(self, base):
+        AbstractNegative.__init__(self,base)
+        self.name = __class__.__name__
+        self.negative_effects.append(self.name)
+        self._add()
 
-
-
-
-
+    def _add(self):
+        for key, value in self.stats.items():
+            if len(key) > 3:
+                self.stats[key] = (value-2)
 
 
 
@@ -99,6 +171,7 @@ class Berserk(AbstractPositive):
 if __name__ == '__main__':
     # создадим героя
     hero = Hero()
+#    import pdb;pdb.set_trace()
     # проверим правильность характеристик по-умолчанию
     assert hero.get_stats() == {'HP': 128,
                                 'MP': 42,
@@ -114,6 +187,7 @@ if __name__ == '__main__':
     assert hero.get_negative_effects() == []
     # проверим список положительных эффектов
     assert hero.get_positive_effects() == []
+    #breakpoint()
     # наложим эффект Berserk
     brs1 = Berserk(hero)
     # проверим правильность изменения характеристик
@@ -128,10 +202,13 @@ if __name__ == '__main__':
                                 'Agility': 15,
                                 'Luck': 8}
     # проверим неизменность списка отрицательных эффектов
+    
     assert brs1.get_negative_effects() == []
     # проверим, что в список положительных эффектов был добавлен Berserk
     assert brs1.get_positive_effects() == ['Berserk']
     # повторное наложение эффекта Berserk
+    
+#    import pdb;pdb.set_trace()
     brs2 = Berserk(brs1)
     # наложение эффекта Curse
     cur1 = Curse(brs2)
@@ -147,11 +224,13 @@ if __name__ == '__main__':
                                 'Agility': 20,
                                 'Luck': 13}
     # проверим правильность добавления эффектов в список положительных эффектов
+    #breakpoint()
     assert cur1.get_positive_effects() == ['Berserk', 'Berserk']
     # проверим правильность добавления эффектов в список отрицательных эффектов
     assert cur1.get_negative_effects() == ['Curse']
     # снятие эффекта Berserk
     cur1.base = brs1
+#    breakpoint()
     # проверим правильность изменения характеристик
     assert cur1.get_stats() == {'HP': 178,
                                 'MP': 42,
@@ -164,6 +243,7 @@ if __name__ == '__main__':
                                 'Agility': 13,
                                 'Luck': 6}
     # проверим правильность удаления эффектов из списка положительных эффектов
+ #   breakpoint()
     assert cur1.get_positive_effects() == ['Berserk']
     # проверим правильность эффектов в списке отрицательных эффектов
     assert cur1.get_negative_effects() == ['Curse']
