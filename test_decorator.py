@@ -120,7 +120,7 @@ class Blessing(AbstractPositive):
     def _add(self):
        for key, value in self.stats.items():
             if len(key) > 3:
-                self.stats[key] = (value-2)
+                self.stats[key] = (value+2)
 
 
 class Weakness(AbstractNegative):
