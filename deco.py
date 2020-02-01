@@ -1,4 +1,6 @@
+from test_decorator import Hero
 
+from abc import ABC, abstractmethod
 # =============================================================================
 # начало секции ВАШ КОД
 # =============================================================================
@@ -18,9 +20,9 @@ class AbstractEffect(ABC, Hero):
         self.stats = self.base.stats.copy()
  
     def get_stats(self):
-        self.stats = self.base.stats.copy()
+        self.stats = self.base.stats
         self._add()
-        return self.stats.copy()
+        return self.stats
     
     @abstractmethod
     def _add(self):
@@ -83,7 +85,7 @@ class Blessing(AbstractPositive):
     def _add(self):
        for key, value in self.stats.items():
             if len(key) > 3:
-                self.stats[key] = (value-2)
+                self.stats[key] = (value+2)
 
 
 class Weakness(AbstractNegative):
