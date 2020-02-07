@@ -1,4 +1,4 @@
-Class Light:
+class Light:
     def __init__(self, dim):
         self.dim = dim
         self.grid = [[0 for i in range(dim[0])] for _ in range(dim[1])]
@@ -21,7 +21,7 @@ Class Light:
         return self.grid.copy()
 
 
-Class System:
+class System:
     def __init__(self):
         self.map = self.grid = [[0 for i in range(30)] for _ in range(20)]
         self.map[5][7] = 1 # Источники света
@@ -32,9 +32,8 @@ Class System:
     
 
 
-Class MappingAdapter:
+class MappingAdapter:
     def __init__(self, adaptee):
-        pass
-
+        self.adaptee = adaptee
     def lighten(self, grid):
         pass
