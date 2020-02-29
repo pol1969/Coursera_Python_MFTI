@@ -124,6 +124,7 @@ SpecialMap	OOP/final_project/Service.py	/^class SpecialMap(MapFactory):$/;"	c
 StrHandler	OOP/chain.py	/^class StrHandler(NullHandler):$/;"	c
 System	OOP/adapter.py	/^class System:$/;"	c
 TestFactorize	OOP/factorize.py	/^class TestFactorize(unittest.TestCase):$/;"	c
+TestParse	bs.py	/^class TestParse(unittest.TestCase):$/;"	c
 Truck	DivingIntoPython/sol_car.py	/^class Truck(CarBase):$/;"	c
 V	friends.py	/^V = '5.71'$/;"	v
 Value	DivingIntoPython/descriptor.py	/^class Value:$/;"	c
@@ -286,6 +287,7 @@ brs2	OOP/test_decorator.py	/^    brs2 = Berserk(brs1)$/;"	v
 calc_age	friends.py	/^def calc_age(uid):$/;"	f
 calc_max_HP	OOP/final_project/Objects.py	/^    def calc_max_HP(self):$/;"	m	class:Creature
 calculate	OOP/final_project/ScreenEngine.py	/^    def calculate(self, min_x, min_y):$/;"	m	class:GameSurface
+calculate	regexp.py	/^def calculate(data, findall):$/;"	f
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'car'$/;"	v	class:Car
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'spec_machine'$/;"	v	class:SpecMachine
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'truck'$/;"	v	class:Truck
@@ -302,6 +304,7 @@ connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, 
 connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:ProgressBar
 connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:ScreenHandle
 connection_made	DivingIntoPython/server.py	/^    def connection_made(self, transport):$/;"	m	class:ClientServerProtocol
+correct	test.py	/^correct = {"a": -98, "b": 196, "c": -686}$/;"	v
 createParser	DivingIntoPython/storage.py	/^def createParser():$/;"	f
 create_game	OOP/final_project/Main.py	/^def create_game(sprite_size, is_new):$/;"	f
 create_sprite	OOP/final_project/Objects.py	/^def create_sprite(img, sprite_size):$/;"	f
@@ -337,6 +340,7 @@ draw_points	OOP/screen.py	/^def draw_points(points, style="points", width=3, col
 draw_points	tmp/screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
 exp	OOP/final_project/Objects.py	/^    def exp(self):$/;"	m	class:Effect
 exp	OOP/final_project/Objects.py	/^    def exp(self, value):$/;"	m	class:Effect
+findall	test.py	/^def findall(regexp):$/;"	f
 first	DivingIntoPython/comfile.py	/^first = os.path.join(tempfile.gettempdir(), 'first')$/;"	v
 floor1	OOP/final_project/Service.py	/^floor1 = [0]$/;"	v
 floor2	OOP/final_project/Service.py	/^floor2 = [0]$/;"	v
@@ -491,6 +495,7 @@ obj	DivingIntoPython/comfile.py	/^obj = File(storage_path)$/;"	v
 obj1	DivingIntoPython/comfile.py	/^obj1 = File(first)$/;"	v
 obj2	DivingIntoPython/comfile.py	/^obj2 = File(second)$/;"	v
 objects	OOP/final_project/Logic.py	/^    objects = []$/;"	v	class:GameEngine
+parse	bs.py	/^def parse(path_to_file):    $/;"	f
 parse_data	DivingIntoPython/client_my.py	/^    def parse_data(self,data):$/;"	m	class:Client
 parser	DivingIntoPython/decorator_prim.py	/^    parser = argparse.ArgumentParser()$/;"	v
 parser	DivingIntoPython/storage.py	/^    parser = createParser()$/;"	v
@@ -520,6 +525,7 @@ remove_point	DivingIntoPython/Saver/polylines.py	/^    def remove_point(self):$/
 remove_point	DivingIntoPython/Saver/polylines.py	/^    def remove_point(self):$/;"	m	class:Polyline
 res	friends.py	/^    res = calc_age('mashka_po')$/;"	v
 restore_hp	OOP/final_project/Service.py	/^def restore_hp(engine, hero):$/;"	f
+result	test.py	/^result = calculate({'a': 1, 'b': 2, 'c': 3}, findall)$/;"	v
 reward	OOP/final_project/Main.py	/^            reward = engine.score - prev_score$/;"	v
 run	DivingIntoPython/test_server.py	/^def run(host, port):$/;"	f
 run_server	DivingIntoPython/server.py	/^def run_server(host, port):$/;"	f
@@ -561,6 +567,7 @@ subscribe	OOP/observer.py	/^    def subscribe(self, subscriber):$/;"	m	class:Obs
 subscribers	OOP/final_project/Logic.py	/^    subscribers = set()$/;"	v	class:GameEngine
 test_many_multipliers	OOP/factorize.py	/^    def test_many_multipliers(self):$/;"	m	class:TestFactorize
 test_negative	OOP/factorize.py	/^    def test_negative(self):$/;"	m	class:TestFactorize
+test_parse	bs.py	/^    def test_parse(self):$/;"	m	class:TestParse
 test_simple_numbers	OOP/factorize.py	/^    def test_simple_numbers(self):$/;"	m	class:TestFactorize
 test_two_simple_multipliers	OOP/factorize.py	/^    def test_two_simple_multipliers(self):$/;"	m	class:TestFactorize
 test_wrong_types_raise_exception	OOP/factorize.py	/^    def test_wrong_types_raise_exception(self):$/;"	m	class:TestFactorize
