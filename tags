@@ -4,25 +4,35 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-A	oop.py	/^class A(Base):$/;"	c
-AbstractEffect	deco.py	/^class AbstractEffect(ABC, Hero):$/;"	c
-AbstractEffect	decomb.py	/^class AbstractEffect(Hero, ABC):$/;"	c
-AbstractEffect	test_decorator.py	/^class AbstractEffect(ABC, Hero):$/;"	c
-AbstractNegative	deco.py	/^class AbstractNegative(AbstractEffect):$/;"	c
-AbstractNegative	decomb.py	/^class AbstractNegative(AbstractEffect):    $/;"	c
-AbstractNegative	test_decorator.py	/^class AbstractNegative(AbstractEffect):$/;"	c
-AbstractPositive	deco.py	/^class AbstractPositive(AbstractEffect):$/;"	c
-AbstractPositive	decomb.py	/^class AbstractPositive(AbstractEffect):$/;"	c
-AbstractPositive	test_decorator.py	/^class AbstractPositive(AbstractEffect):$/;"	c
-B	oop.py	/^class B(Base):$/;"	c
-Base	oop.py	/^class Base(ABC):$/;"	c
-Berserk	deco.py	/^class Berserk(AbstractPositive):$/;"	c
-Berserk	decomb.py	/^class Berserk(AbstractPositive):    $/;"	c
-Berserk	test_decorator.py	/^class Berserk(AbstractPositive):$/;"	c
-Blessing	deco.py	/^class Blessing(AbstractPositive):$/;"	c
-Blessing	decomb.py	/^class Blessing(AbstractPositive):    $/;"	c
-Blessing	test_decorator.py	/^class Blessing(AbstractPositive):$/;"	c
-C	oop.py	/^class C(Base):$/;"	c
+A	OOP/oop.py	/^class A(Base):$/;"	c
+ACCESS_TOKEN	friends.py	/^               '72454d235c274f1a2be5f45ee711'$/;"	v
+ALLY_TEXTURE	OOP/final_project/Service.py	/^ALLY_TEXTURE = os.path.join("texture", "ally")$/;"	v
+API_URL	friends.py	/^API_URL = 'https:\/\/api.vk.com\/method'$/;"	v
+AbstractEffect	OOP/deco.py	/^class AbstractEffect(ABC, Hero):$/;"	c
+AbstractEffect	OOP/decomb.py	/^class AbstractEffect(Hero, ABC):$/;"	c
+AbstractEffect	OOP/test_decorator.py	/^class AbstractEffect(ABC, Hero):$/;"	c
+AbstractLevel	OOP/af.py	/^class AbstractLevel:$/;"	c
+AbstractLevel	OOP/yaml.py	/^class AbstractLevel(yaml.YAMLObject):$/;"	c
+AbstractNegative	OOP/deco.py	/^class AbstractNegative(AbstractEffect):$/;"	c
+AbstractNegative	OOP/decomb.py	/^class AbstractNegative(AbstractEffect):    $/;"	c
+AbstractNegative	OOP/test_decorator.py	/^class AbstractNegative(AbstractEffect):$/;"	c
+AbstractObject	OOP/final_project/Objects.py	/^class AbstractObject(ABC):$/;"	c
+AbstractObserver	OOP/observer.py	/^class AbstractObserver(ABC):$/;"	c
+AbstractPositive	OOP/deco.py	/^class AbstractPositive(AbstractEffect):$/;"	c
+AbstractPositive	OOP/decomb.py	/^class AbstractPositive(AbstractEffect):$/;"	c
+AbstractPositive	OOP/test_decorator.py	/^class AbstractPositive(AbstractEffect):$/;"	c
+Ally	OOP/final_project/Objects.py	/^class Ally(AbstractObject, Interactive):$/;"	c
+B	OOP/oop.py	/^class B(Base):$/;"	c
+Base	OOP/oop.py	/^class Base(ABC):$/;"	c
+Berserk	OOP/deco.py	/^class Berserk(AbstractPositive):$/;"	c
+Berserk	OOP/decomb.py	/^class Berserk(AbstractPositive):    $/;"	c
+Berserk	OOP/final_project/Objects.py	/^class Berserk(Effect):$/;"	c
+Berserk	OOP/test_decorator.py	/^class Berserk(AbstractPositive):$/;"	c
+Blessing	OOP/deco.py	/^class Blessing(AbstractPositive):$/;"	c
+Blessing	OOP/decomb.py	/^class Blessing(AbstractPositive):    $/;"	c
+Blessing	OOP/final_project/Objects.py	/^class Blessing(Effect):$/;"	c
+Blessing	OOP/test_decorator.py	/^class Blessing(AbstractPositive):$/;"	c
+C	OOP/oop.py	/^class C(Base):$/;"	c
 Car	DivingIntoPython/sol_car.py	/^class Car(CarBase):$/;"	c
 CarBase	DivingIntoPython/sol_car.py	/^class CarBase:$/;"	c
 Client	DivingIntoPython/client.py	/^class Client:$/;"	c
@@ -32,47 +42,113 @@ ClientError	DivingIntoPython/client_my.py	/^class ClientError(Exception):$/;"	c
 ClientProtocolError	DivingIntoPython/client.py	/^class ClientProtocolError(ClientError):$/;"	c
 ClientServerProtocol	DivingIntoPython/server.py	/^class ClientServerProtocol(asyncio.Protocol):$/;"	c
 ClientSocketError	DivingIntoPython/client.py	/^class ClientSocketError(ClientError):$/;"	c
-Curse	deco.py	/^class Curse(AbstractNegative):$/;"	c
-Curse	decomb.py	/^class Curse(AbstractNegative):$/;"	c
-Curse	test_decorator.py	/^class Curse(AbstractNegative):$/;"	c
-EvilEye	deco.py	/^class EvilEye(AbstractNegative):$/;"	c
-EvilEye	decomb.py	/^class EvilEye(AbstractNegative):$/;"	c
-EvilEye	test_decorator.py	/^class EvilEye(AbstractNegative):$/;"	c
+Creature	OOP/final_project/Objects.py	/^class Creature(AbstractObject):$/;"	c
+Curse	OOP/deco.py	/^class Curse(AbstractNegative):$/;"	c
+Curse	OOP/decomb.py	/^class Curse(AbstractNegative):$/;"	c
+Curse	OOP/test_decorator.py	/^class Curse(AbstractNegative):$/;"	c
+ENEMY_TEXTURE	OOP/final_project/Service.py	/^ENEMY_TEXTURE = os.path.join("texture", "enemies")$/;"	v
+EasyLevel	OOP/af.py	/^class EasyLevel(AbstractLevel):$/;"	c
+EasyLevel	OOP/yaml.py	/^class EasyLevel(AbstractLevel):$/;"	c
+Effect	OOP/final_project/Objects.py	/^class Effect(Hero):$/;"	c
+EmptyMap	OOP/final_project/Service.py	/^class EmptyMap(MapFactory):$/;"	c
+EndMap	OOP/final_project/Service.py	/^class EndMap(MapFactory):$/;"	c
+Enemy	OOP/final_project/Objects.py	/^class Enemy(Creature, Interactive):$/;"	c
+EventGet	OOP/chain.py	/^class EventGet:$/;"	c
+EventSet	OOP/chain.py	/^class EventSet:$/;"	c
+EvilEye	OOP/deco.py	/^class EvilEye(AbstractNegative):$/;"	c
+EvilEye	OOP/decomb.py	/^class EvilEye(AbstractNegative):$/;"	c
+EvilEye	OOP/test_decorator.py	/^class EvilEye(AbstractNegative):$/;"	c
 File	DivingIntoPython/fileobj.py	/^class File:$/;"	c
 FileReader	DivingIntoPython/solution.py	/^class FileReader:$/;"	c
-Hero	test_decorator.py	/^class Hero:$/;"	c
-Knot	Saver/polylines.py	/^class Knot(Polyline):$/;"	c
-Knot	p.py	/^class Knot(Polyline):$/;"	c
-Knot	screen.py	/^class Knot(Polyline):$/;"	c
-Polyline	Saver/polylines.py	/^class Polyline:$/;"	c
-Polyline	p.py	/^class Polyline:$/;"	c
-Polyline	screen.py	/^class Polyline():$/;"	c
-SCREEN_DIM	Saver/app.py	/^SCREEN_DIM = (800, 600)$/;"	v
-SCREEN_DIM	p.py	/^SCREEN_DIM = (800, 600)$/;"	v
-SCREEN_DIM	screen.py	/^SCREEN_DIM = (800, 600)$/;"	v
+FloatHandler	OOP/chain.py	/^class FloatHandler(NullHandler):$/;"	c
+FullNotificationPrinter	OOP/observer.py	/^class FullNotificationPrinter(AbstractObserver):$/;"	c
+GameEngine	OOP/final_project/Logic.py	/^class GameEngine:$/;"	c
+GameSurface	OOP/final_project/ScreenEngine.py	/^class GameSurface(ScreenHandle):$/;"	c
+HardLevel	OOP/af.py	/^class HardLevel(AbstractLevel):$/;"	c
+HardLevel	OOP/yaml.py	/^class HardLevel(AbstractLevel):$/;"	c
+HelpWindow	OOP/final_project/ScreenEngine.py	/^class HelpWindow(ScreenHandle):$/;"	c
+Hero	OOP/final_project/Objects.py	/^class Hero(Creature):$/;"	c
+Hero	OOP/test_decorator.py	/^class Hero:$/;"	c
+InfoWindow	OOP/final_project/ScreenEngine.py	/^class InfoWindow(ScreenHandle):$/;"	c
+IntHandler	OOP/chain.py	/^class IntHandler(NullHandler):$/;"	c
+Interactive	OOP/final_project/Objects.py	/^class Interactive(ABC):$/;"	c
+KEYBOARD_CONTROL	OOP/final_project/Main.py	/^KEYBOARD_CONTROL = True$/;"	v
+Knot	DivingIntoPython/Saver/polylines.py	/^class Knot(Polyline):$/;"	c
+Knot	OOP/p.py	/^class Knot(Polyline):$/;"	c
+Knot	OOP/screen.py	/^class Knot(Polyline):$/;"	c
+Light	OOP/adapter.py	/^class Light:$/;"	c
+Map	OOP/af.py	/^    class Map:$/;"	c	class:EasyLevel
+Map	OOP/af.py	/^    class Map:$/;"	c	class:HardLevel
+Map	OOP/af.py	/^    class Map:$/;"	c	class:MediumLevel
+Map	OOP/final_project/Service.py	/^    class Map:$/;"	c	class:EmptyMap
+Map	OOP/final_project/Service.py	/^    class Map:$/;"	c	class:EndMap
+Map	OOP/final_project/Service.py	/^    class Map:$/;"	c	class:RandomMap
+Map	OOP/final_project/Service.py	/^    class Map:$/;"	c	class:SpecialMap
+Map	OOP/yaml.py	/^    class Map(ABC):$/;"	c	class:AbstractLevel
+Map	OOP/yaml.py	/^    class Map:$/;"	c	class:EasyLevel
+Map	OOP/yaml.py	/^    class Map:$/;"	c	class:HardLevel
+Map	OOP/yaml.py	/^    class Map:$/;"	c	class:MediumLevel
+MapFactory	OOP/final_project/Service.py	/^class MapFactory(yaml.YAMLObject):$/;"	c
+MappingAdapter	OOP/adapt.py	/^class MappingAdapter:$/;"	c
+MappingAdapter	OOP/adapter.py	/^class MappingAdapter:$/;"	c
+MediumLevel	OOP/af.py	/^class MediumLevel(AbstractLevel):$/;"	c
+MediumLevel	OOP/yaml.py	/^class MediumLevel(AbstractLevel):$/;"	c
+NullHandler	OOP/chain.py	/^class NullHandler:$/;"	c
+OBJECT_TEXTURE	OOP/final_project/Service.py	/^OBJECT_TEXTURE = os.path.join("texture", "objects")$/;"	v
+Objects	OOP/af.py	/^    class Objects:$/;"	c	class:EasyLevel
+Objects	OOP/af.py	/^    class Objects:$/;"	c	class:HardLevel
+Objects	OOP/af.py	/^    class Objects:$/;"	c	class:MediumLevel
+Objects	OOP/final_project/Service.py	/^    class Objects:$/;"	c	class:EmptyMap
+Objects	OOP/final_project/Service.py	/^    class Objects:$/;"	c	class:EndMap
+Objects	OOP/final_project/Service.py	/^    class Objects:$/;"	c	class:RandomMap
+Objects	OOP/final_project/Service.py	/^    class Objects:$/;"	c	class:SpecialMap
+Objects	OOP/yaml.py	/^    class Objects(ABC):$/;"	c	class:AbstractLevel
+Objects	OOP/yaml.py	/^    class Objects:$/;"	c	class:EasyLevel
+Objects	OOP/yaml.py	/^    class Objects:$/;"	c	class:HardLevel
+Objects	OOP/yaml.py	/^    class Objects:$/;"	c	class:MediumLevel
+ObservableEngine	OOP/observer.py	/^class ObservableEngine(Engine):$/;"	c
+Polyline	DivingIntoPython/Saver/polylines.py	/^class Polyline:$/;"	c
+Polyline	OOP/p.py	/^class Polyline:$/;"	c
+Polyline	OOP/screen.py	/^class Polyline():$/;"	c
+ProgressBar	OOP/final_project/ScreenEngine.py	/^class ProgressBar(ScreenHandle):$/;"	c
+RandomMap	OOP/final_project/Service.py	/^class RandomMap(MapFactory):$/;"	c
+SCREEN_DIM	DivingIntoPython/Saver/app.py	/^SCREEN_DIM = (800, 600)$/;"	v
+SCREEN_DIM	OOP/final_project/Main.py	/^SCREEN_DIM = (800, 600)$/;"	v
+SCREEN_DIM	OOP/p.py	/^SCREEN_DIM = (800, 600)$/;"	v
+SCREEN_DIM	OOP/screen.py	/^SCREEN_DIM = (800, 600)$/;"	v
 SCREEN_DIM	tmp/screen.py	/^SCREEN_DIM = (800, 600)$/;"	v
+ScreenHandle	OOP/final_project/ScreenEngine.py	/^class ScreenHandle(pygame.Surface):$/;"	c
+ShortNotificationPrinter	OOP/observer.py	/^class ShortNotificationPrinter(AbstractObserver):$/;"	c
 SpecMachine	DivingIntoPython/sol_car.py	/^class SpecMachine(CarBase):$/;"	c
-TestFactorize	factorize.py	/^class TestFactorize(unittest.TestCase):$/;"	c
+SpecialMap	OOP/final_project/Service.py	/^class SpecialMap(MapFactory):$/;"	c
+StrHandler	OOP/chain.py	/^class StrHandler(NullHandler):$/;"	c
+System	OOP/adapter.py	/^class System:$/;"	c
+TestFactorize	OOP/factorize.py	/^class TestFactorize(unittest.TestCase):$/;"	c
 Truck	DivingIntoPython/sol_car.py	/^class Truck(CarBase):$/;"	c
+V	friends.py	/^V = '5.71'$/;"	v
 Value	DivingIntoPython/descriptor.py	/^class Value:$/;"	c
-Vec2d	Saver/vector.py	/^class Vec2d:$/;"	c
-Vec2d	p.py	/^class Vec2d:$/;"	c
-Vec2d	screen.py	/^class Vec2d():$/;"	c
-Weakness	deco.py	/^class Weakness(AbstractNegative):$/;"	c
-Weakness	decomb.py	/^class Weakness(AbstractNegative):    $/;"	c
-Weakness	test_decorator.py	/^class Weakness(AbstractNegative):$/;"	c
+Vec2d	DivingIntoPython/Saver/vector.py	/^class Vec2d:$/;"	c
+Vec2d	OOP/p.py	/^class Vec2d:$/;"	c
+Vec2d	OOP/screen.py	/^class Vec2d():$/;"	c
+Weakness	OOP/deco.py	/^class Weakness(AbstractNegative):$/;"	c
+Weakness	OOP/decomb.py	/^class Weakness(AbstractNegative):    $/;"	c
+Weakness	OOP/final_project/Objects.py	/^class Weakness(Effect):$/;"	c
+Weakness	OOP/test_decorator.py	/^class Weakness(AbstractNegative):$/;"	c
+__add__	DivingIntoPython/Saver/vector.py	/^    def __add__(self, v):  # сумма двух векторов$/;"	m	class:Vec2d	file:
 __add__	DivingIntoPython/fileobj.py	/^    def __add__(self, obj):$/;"	m	class:File	file:
-__add__	Saver/vector.py	/^    def __add__(self, v):  # сумма двух векторов$/;"	m	class:Vec2d	file:
-__add__	p.py	/^    def __add__(self, vec):$/;"	m	class:Vec2d	file:
-__add__	screen.py	/^    def __add__(self, other):$/;"	m	class:Vec2d	file:
-__add__	screen.py	/^    def __add__(self, p):$/;"	m	class:Knot	file:
-__add__	screen.py	/^    def __add__(self, p):$/;"	m	class:Polyline	file:
+__add__	OOP/p.py	/^    def __add__(self, vec):$/;"	m	class:Vec2d	file:
+__add__	OOP/screen.py	/^    def __add__(self, other):$/;"	m	class:Vec2d	file:
+__add__	OOP/screen.py	/^    def __add__(self, p):$/;"	m	class:Knot	file:
+__add__	OOP/screen.py	/^    def __add__(self, p):$/;"	m	class:Polyline	file:
 __get__	DivingIntoPython/descriptor.py	/^    def __get__(self, obj, obj_type):$/;"	m	class:Value	file:
-__get_count	Saver/polylines.py	/^    def __get_count(self):$/;"	m	class:Knot	file:
-__get_knot	Saver/polylines.py	/^    def __get_knot(self):$/;"	m	class:Knot	file:
-__get_point	Saver/polylines.py	/^    def __get_point(self, points, alpha, deg=None):$/;"	m	class:Knot	file:
-__get_points	Saver/polylines.py	/^    def __get_points(self, base_points):$/;"	m	class:Knot	file:
-__getitem__	screen.py	/^    def __getitem__(self, key):$/;"	m	class:Vec2d	file:
+__get_count	DivingIntoPython/Saver/polylines.py	/^    def __get_count(self):$/;"	m	class:Knot	file:
+__get_knot	DivingIntoPython/Saver/polylines.py	/^    def __get_knot(self):$/;"	m	class:Knot	file:
+__get_point	DivingIntoPython/Saver/polylines.py	/^    def __get_point(self, points, alpha, deg=None):$/;"	m	class:Knot	file:
+__get_points	DivingIntoPython/Saver/polylines.py	/^    def __get_points(self, base_points):$/;"	m	class:Knot	file:
+__getitem__	OOP/screen.py	/^    def __getitem__(self, key):$/;"	m	class:Vec2d	file:
+__init__	DivingIntoPython/Saver/polylines.py	/^    def __init__(self, color=None):$/;"	m	class:Polyline
+__init__	DivingIntoPython/Saver/polylines.py	/^    def __init__(self, color=None, addition_points=5):$/;"	m	class:Knot
+__init__	DivingIntoPython/Saver/vector.py	/^    def __init__(self, x, y):$/;"	m	class:Vec2d
 __init__	DivingIntoPython/client.py	/^    def __init__(self, host, port, timeout=None):$/;"	m	class:Client
 __init__	DivingIntoPython/client_my.py	/^    def __init__(self, host, port, timeout=2):$/;"	m	class:Client
 __init__	DivingIntoPython/client_my.py	/^    def __init__(self, text):$/;"	m	class:ClientError
@@ -83,274 +159,438 @@ __init__	DivingIntoPython/sol_car.py	/^    def __init__(self, brand, photo_file_
 __init__	DivingIntoPython/sol_car.py	/^    def __init__(self, brand, photo_file_name, carrying, extra):$/;"	m	class:SpecMachine
 __init__	DivingIntoPython/sol_car.py	/^    def __init__(self, brand, photo_file_name, carrying, passenger_seats_count):$/;"	m	class:Car
 __init__	DivingIntoPython/solution.py	/^    def __init__(self, path):$/;"	m	class:FileReader
-__init__	Saver/polylines.py	/^    def __init__(self, color=None):$/;"	m	class:Polyline
-__init__	Saver/polylines.py	/^    def __init__(self, color=None, addition_points=5):$/;"	m	class:Knot
-__init__	Saver/vector.py	/^    def __init__(self, x, y):$/;"	m	class:Vec2d
-__init__	adapter.py	/^    def __init__(self):$/;"	f
-__init__	adapter.py	/^    def __init__(self, adaptee):$/;"	f
-__init__	adapter.py	/^    def __init__(self, dim):$/;"	f
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:Berserk
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:Blessing
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:Curse
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:EvilEye
-__init__	deco.py	/^    def __init__(self, base):$/;"	m	class:Weakness
-__init__	decomb.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
-__init__	oop.py	/^    def __init__(self, data, result):$/;"	m	class:Base
-__init__	p.py	/^    def __init__(self):$/;"	m	class:Polyline
-__init__	p.py	/^    def __init__(self, count):$/;"	m	class:Knot
-__init__	p.py	/^    def __init__(self, x_or_pair, y=None):$/;"	m	class:Vec2d
-__init__	screen.py	/^    def __init__(self):$/;"	m	class:Polyline
-__init__	screen.py	/^    def __init__(self, count):$/;"	m	class:Knot
-__init__	screen.py	/^    def __init__(self, x, y):$/;"	m	class:Vec2d
-__init__	test_decorator.py	/^    def __init__(self):$/;"	m	class:Hero
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Berserk
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Blessing
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Curse
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:EvilEye
-__init__	test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Weakness
+__init__	OOP/adapt.py	/^    def __init__(self, adaptee):$/;"	m	class:MappingAdapter
+__init__	OOP/adapter.py	/^    def __init__(self):$/;"	m	class:System
+__init__	OOP/adapter.py	/^    def __init__(self, adaptee):$/;"	m	class:MappingAdapter
+__init__	OOP/adapter.py	/^    def __init__(self, dim):$/;"	m	class:Light
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:EasyLevel.Map
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:EasyLevel.Objects
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:HardLevel.Map
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:HardLevel.Objects
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:MediumLevel.Map
+__init__	OOP/af.py	/^        def __init__(self):$/;"	m	class:MediumLevel.Objects
+__init__	OOP/chain.py	/^    def __init__(self, pr):$/;"	m	class:EventGet
+__init__	OOP/chain.py	/^    def __init__(self, pr):$/;"	m	class:EventSet
+__init__	OOP/chain.py	/^    def __init__(self, successor=None):$/;"	m	class:NullHandler
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:Berserk
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:Blessing
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:Curse
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:EvilEye
+__init__	OOP/deco.py	/^    def __init__(self, base):$/;"	m	class:Weakness
+__init__	OOP/decomb.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
+__init__	OOP/final_project/Objects.py	/^    def __init__(self, base):$/;"	m	class:Effect
+__init__	OOP/final_project/Objects.py	/^    def __init__(self, icon, action, position):$/;"	m	class:Ally
+__init__	OOP/final_project/Objects.py	/^    def __init__(self, icon, stats, position):$/;"	m	class:Creature
+__init__	OOP/final_project/Objects.py	/^    def __init__(self, icon, stats, xp, position):$/;"	m	class:Enemy
+__init__	OOP/final_project/Objects.py	/^    def __init__(self, stats, icon):$/;"	m	class:Hero
+__init__	OOP/final_project/ScreenEngine.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:HelpWindow
+__init__	OOP/final_project/ScreenEngine.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:InfoWindow
+__init__	OOP/final_project/ScreenEngine.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:ProgressBar
+__init__	OOP/final_project/ScreenEngine.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:ScreenHandle
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:EmptyMap.Map
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:EmptyMap.Objects
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:EndMap.Map
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:EndMap.Objects
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:RandomMap.Map
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:RandomMap.Objects
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:SpecialMap.Map
+__init__	OOP/final_project/Service.py	/^        def __init__(self):$/;"	m	class:SpecialMap.Objects
+__init__	OOP/observer.py	/^    def __init__(self):$/;"	m	class:FullNotificationPrinter
+__init__	OOP/observer.py	/^    def __init__(self):$/;"	m	class:ObservableEngine
+__init__	OOP/observer.py	/^    def __init__(self):$/;"	m	class:ShortNotificationPrinter
+__init__	OOP/oop.py	/^    def __init__(self, data, result):$/;"	m	class:Base
+__init__	OOP/p.py	/^    def __init__(self):$/;"	m	class:Polyline
+__init__	OOP/p.py	/^    def __init__(self, count):$/;"	m	class:Knot
+__init__	OOP/p.py	/^    def __init__(self, x_or_pair, y=None):$/;"	m	class:Vec2d
+__init__	OOP/screen.py	/^    def __init__(self):$/;"	m	class:Polyline
+__init__	OOP/screen.py	/^    def __init__(self, count):$/;"	m	class:Knot
+__init__	OOP/screen.py	/^    def __init__(self, x, y):$/;"	m	class:Vec2d
+__init__	OOP/test_decorator.py	/^    def __init__(self):$/;"	m	class:Hero
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:AbstractEffect
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Berserk
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Blessing
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Curse
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:EvilEye
+__init__	OOP/test_decorator.py	/^    def __init__(self, base):$/;"	m	class:Weakness
+__init__	OOP/yaml.py	/^            def __init__(self):$/;"	m	class:EasyLevel.Objects
+__init__	OOP/yaml.py	/^            def __init__(self):$/;"	m	class:HardLevel.Objects
+__init__	OOP/yaml.py	/^            def __init__(self):$/;"	m	class:MediumLevel.Objects
+__init__	OOP/yaml.py	/^        def __init__(self):$/;"	m	class:EasyLevel.Map
+__init__	OOP/yaml.py	/^        def __init__(self):$/;"	m	class:HardLevel.Map
+__init__	OOP/yaml.py	/^        def __init__(self):$/;"	m	class:MediumLevel.Map
 __iter__	DivingIntoPython/fileobj.py	/^    def __iter__(self):$/;"	m	class:File	file:
-__len__	Saver/vector.py	/^    def __len__(self):  # длинна вектора$/;"	m	class:Vec2d	file:
-__len__	screen.py	/^    def __len__(self):$/;"	m	class:Vec2d	file:
-__mul__	Saver/vector.py	/^    def __mul__(self, z):$/;"	m	class:Vec2d	file:
-__mul__	p.py	/^    def __mul__(self, k):$/;"	m	class:Vec2d	file:
-__mul__	screen.py	/^    def __mul__(self, k):$/;"	m	class:Vec2d	file:
+__len__	DivingIntoPython/Saver/vector.py	/^    def __len__(self):  # длинна вектора$/;"	m	class:Vec2d	file:
+__len__	OOP/screen.py	/^    def __len__(self):$/;"	m	class:Vec2d	file:
+__mul__	DivingIntoPython/Saver/vector.py	/^    def __mul__(self, z):$/;"	m	class:Vec2d	file:
+__mul__	OOP/p.py	/^    def __mul__(self, k):$/;"	m	class:Vec2d	file:
+__mul__	OOP/screen.py	/^    def __mul__(self, k):$/;"	m	class:Vec2d	file:
 __next__	DivingIntoPython/fileobj.py	/^    def __next__(self):$/;"	m	class:File	file:
-__radd__	Saver/vector.py	/^    def __radd__(self, v):  # прибавить векторов$/;"	m	class:Vec2d	file:
+__radd__	DivingIntoPython/Saver/vector.py	/^    def __radd__(self, v):  # прибавить векторов$/;"	m	class:Vec2d	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Car	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:SpecMachine	file:
 __repr__	DivingIntoPython/sol_car.py	/^    def __repr__(self):$/;"	m	class:Truck	file:
-__repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Polyline	file:
-__repr__	screen.py	/^    def __repr__(self):$/;"	m	class:Vec2d	file:
-__rmul__	Saver/vector.py	/^    def __rmul__(self, z):$/;"	m	class:Vec2d	file:
+__repr__	OOP/screen.py	/^    def __repr__(self):$/;"	m	class:Polyline	file:
+__repr__	OOP/screen.py	/^    def __repr__(self):$/;"	m	class:Vec2d	file:
+__rmul__	DivingIntoPython/Saver/vector.py	/^    def __rmul__(self, z):$/;"	m	class:Vec2d	file:
 __set__	DivingIntoPython/descriptor.py	/^    def __set__(self, obj, value):$/;"	m	class:Value	file:
-__set_count	Saver/polylines.py	/^    def __set_count(self, x):$/;"	m	class:Knot	file:
+__set_count	DivingIntoPython/Saver/polylines.py	/^    def __set_count(self, x):$/;"	m	class:Knot	file:
+__str__	DivingIntoPython/Saver/vector.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
 __str__	DivingIntoPython/fileobj.py	/^    def __str__(self):$/;"	m	class:File	file:
-__str__	Saver/vector.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
-__str__	screen.py	/^    def __str__(self):$/;"	m	class:Polyline	file:
-__str__	screen.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
-__sub__	Saver/vector.py	/^    def __sub__(self, v):  # разность двух векторов$/;"	m	class:Vec2d	file:
-__sub__	p.py	/^    def __sub__(self, vec):$/;"	m	class:Vec2d	file:
-__sub__	screen.py	/^    def __sub__(self, other):$/;"	m	class:Vec2d	file:
-_add	deco.py	/^    def _add(self):  $/;"	m	class:Berserk
-_add	deco.py	/^    def _add(self):$/;"	m	class:AbstractEffect
-_add	deco.py	/^    def _add(self):$/;"	m	class:Blessing
-_add	deco.py	/^    def _add(self):$/;"	m	class:Curse
-_add	deco.py	/^    def _add(self):$/;"	m	class:EvilEye
-_add	deco.py	/^    def _add(self):$/;"	m	class:Weakness
-_add	test_decorator.py	/^    def _add(self):  $/;"	m	class:Berserk
-_add	test_decorator.py	/^    def _add(self):$/;"	m	class:AbstractEffect
-_add	test_decorator.py	/^    def _add(self):$/;"	m	class:Blessing
-_add	test_decorator.py	/^    def _add(self):$/;"	m	class:Curse
-_add	test_decorator.py	/^    def _add(self):$/;"	m	class:EvilEye
-_add	test_decorator.py	/^    def _add(self):$/;"	m	class:Weakness
+__str__	OOP/screen.py	/^    def __str__(self):$/;"	m	class:Polyline	file:
+__str__	OOP/screen.py	/^    def __str__(self):$/;"	m	class:Vec2d	file:
+__sub__	DivingIntoPython/Saver/vector.py	/^    def __sub__(self, v):  # разность двух векторов$/;"	m	class:Vec2d	file:
+__sub__	OOP/p.py	/^    def __sub__(self, vec):$/;"	m	class:Vec2d	file:
+__sub__	OOP/screen.py	/^    def __sub__(self, other):$/;"	m	class:Vec2d	file:
+_add	OOP/deco.py	/^    def _add(self):  $/;"	m	class:Berserk
+_add	OOP/deco.py	/^    def _add(self):$/;"	m	class:AbstractEffect
+_add	OOP/deco.py	/^    def _add(self):$/;"	m	class:Blessing
+_add	OOP/deco.py	/^    def _add(self):$/;"	m	class:Curse
+_add	OOP/deco.py	/^    def _add(self):$/;"	m	class:EvilEye
+_add	OOP/deco.py	/^    def _add(self):$/;"	m	class:Weakness
+_add	OOP/test_decorator.py	/^    def _add(self):  $/;"	m	class:Berserk
+_add	OOP/test_decorator.py	/^    def _add(self):$/;"	m	class:AbstractEffect
+_add	OOP/test_decorator.py	/^    def _add(self):$/;"	m	class:Blessing
+_add	OOP/test_decorator.py	/^    def _add(self):$/;"	m	class:Curse
+_add	OOP/test_decorator.py	/^    def _add(self):$/;"	m	class:EvilEye
+_add	OOP/test_decorator.py	/^    def _add(self):$/;"	m	class:Weakness
 _main	DivingIntoPython/client.py	/^def _main():$/;"	f
 _read	DivingIntoPython/client.py	/^    def _read(self):$/;"	m	class:Client
+actions	OOP/final_project/Main.py	/^            actions = [$/;"	v
 add	tmp/screen.py	/^def add(x, y):$/;"	f
-add_point	Saver/polylines.py	/^    def add_point(self, point, speed):$/;"	m	class:Knot
-add_point	Saver/polylines.py	/^    def add_point(self, point, speed):$/;"	m	class:Polyline
-add_point	p.py	/^    def add_point(self, point, speed):$/;"	m	class:Knot
-add_point	p.py	/^    def add_point(self, point, speed):$/;"	m	class:Polyline
-add_points	Saver/polylines.py	/^    def add_points(self, points, speeds):$/;"	m	class:Polyline
-addition_points	Saver/polylines.py	/^    addition_points = property(__get_count, __set_count)$/;"	v	class:Knot
+add_gold	OOP/final_project/Service.py	/^def add_gold(engine, hero):$/;"	f
+add_hero	OOP/final_project/Logic.py	/^    def add_hero(self, hero):$/;"	m	class:GameEngine
+add_object	OOP/final_project/Logic.py	/^    def add_object(self, obj):$/;"	m	class:GameEngine
+add_objects	OOP/final_project/Logic.py	/^    def add_objects(self, objects):$/;"	m	class:GameEngine
+add_point	DivingIntoPython/Saver/polylines.py	/^    def add_point(self, point, speed):$/;"	m	class:Knot
+add_point	DivingIntoPython/Saver/polylines.py	/^    def add_point(self, point, speed):$/;"	m	class:Polyline
+add_point	OOP/p.py	/^    def add_point(self, point, speed):$/;"	m	class:Knot
+add_point	OOP/p.py	/^    def add_point(self, point, speed):$/;"	m	class:Polyline
+add_points	DivingIntoPython/Saver/polylines.py	/^    def add_points(self, points, speeds):$/;"	m	class:Polyline
+addition_points	DivingIntoPython/Saver/polylines.py	/^    addition_points = property(__get_count, __set_count)$/;"	v	class:Knot
 answer	DivingIntoPython/server.py	/^answer = dict()$/;"	v
+answer	OOP/final_project/Main.py	/^            answer = np.random.randint(0, 100, 4)$/;"	v
+answer	OOP/final_project/Main.py	/^    answer = np.zeros(4, dtype=float)$/;"	v
+apply_blessing	OOP/final_project/Service.py	/^def apply_blessing(engine, hero):$/;"	f
+apply_effect	OOP/final_project/Objects.py	/^    def apply_effect(self):$/;"	m	class:Berserk
+apply_effect	OOP/final_project/Objects.py	/^    def apply_effect(self):$/;"	m	class:Blessing
+apply_effect	OOP/final_project/Objects.py	/^    def apply_effect(self):$/;"	m	class:Effect
+apply_effect	OOP/final_project/Objects.py	/^    def apply_effect(self):$/;"	m	class:Weakness
 args	DivingIntoPython/decorator_prim.py	/^    args = parser.parse_args()$/;"	v
-b	r.py	/^b = Berserk(h)$/;"	v
-b2	r.py	/^b2 = Berserk(b)$/;"	v
-b3	r.py	/^b3 = Berserk(b2)$/;"	v
-brs1	test_decorator.py	/^    brs1 = Berserk(hero)$/;"	v
-brs2	test_decorator.py	/^    brs2 = Berserk(brs1)$/;"	v
+b	OOP/r.py	/^b = Berserk(h)$/;"	v
+b2	OOP/r.py	/^b2 = Berserk(b)$/;"	v
+b3	OOP/r.py	/^b3 = Berserk(b2)$/;"	v
+base_stats	OOP/final_project/Main.py	/^base_stats = {$/;"	v
+brs1	OOP/test_decorator.py	/^    brs1 = Berserk(hero)$/;"	v
+brs2	OOP/test_decorator.py	/^    brs2 = Berserk(brs1)$/;"	v
+calc_age	friends.py	/^def calc_age(uid):$/;"	f
+calc_max_HP	OOP/final_project/Objects.py	/^    def calc_max_HP(self):$/;"	m	class:Creature
+calculate	OOP/final_project/ScreenEngine.py	/^    def calculate(self, min_x, min_y):$/;"	m	class:GameSurface
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'car'$/;"	v	class:Car
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'spec_machine'$/;"	v	class:SpecMachine
 car_type	DivingIntoPython/sol_car.py	/^    car_type = 'truck'$/;"	v	class:Truck
+clear	DivingIntoPython/Saver/polylines.py	/^    def clear(self):$/;"	m	class:Polyline
 clear	DivingIntoPython/decorator_prim.py	/^def clear():$/;"	f
-clear	Saver/polylines.py	/^    def clear(self):$/;"	m	class:Polyline
 close	DivingIntoPython/client.py	/^    def close(self):$/;"	m	class:Client
-color	Saver/app.py	/^    color = pygame.Color(0)$/;"	v
-color	p.py	/^    color = pygame.Color(0)$/;"	v
-color	screen.py	/^    color = pygame.Color(0)$/;"	v
+color	DivingIntoPython/Saver/app.py	/^    color = pygame.Color(0)$/;"	v
+color	OOP/p.py	/^    color = pygame.Color(0)$/;"	v
+color	OOP/screen.py	/^    color = pygame.Color(0)$/;"	v
+colors	OOP/final_project/ScreenEngine.py	/^colors = {$/;"	v
+connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:GameSurface
+connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:HelpWindow
+connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:InfoWindow
+connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:ProgressBar
+connect_engine	OOP/final_project/ScreenEngine.py	/^    def connect_engine(self, engine):$/;"	m	class:ScreenHandle
 connection_made	DivingIntoPython/server.py	/^    def connection_made(self, transport):$/;"	m	class:ClientServerProtocol
 createParser	DivingIntoPython/storage.py	/^def createParser():$/;"	f
-cur1	test_decorator.py	/^    cur1 = Curse(brs2)$/;"	v
-current_knot	Saver/app.py	/^                    current_knot = event.key - 48$/;"	v
-current_knot	Saver/app.py	/^    current_knot = 1$/;"	v
+create_game	OOP/final_project/Main.py	/^def create_game(sprite_size, is_new):$/;"	f
+create_sprite	OOP/final_project/Objects.py	/^def create_sprite(img, sprite_size):$/;"	f
+create_sprite	OOP/final_project/Service.py	/^def create_sprite(img, sprite_size):$/;"	f
+cur1	OOP/test_decorator.py	/^    cur1 = Curse(brs2)$/;"	v
+current_knot	DivingIntoPython/Saver/app.py	/^                    current_knot = event.key - 48$/;"	v
+current_knot	DivingIntoPython/Saver/app.py	/^    current_knot = 1$/;"	v
 data	DivingIntoPython/storage.py	/^            data = json.load(f)$/;"	v
 data	DivingIntoPython/storage.py	/^            data =defaultdict(list)$/;"	v
 data_received	DivingIntoPython/server.py	/^    def data_received(self, data):$/;"	m	class:ClientServerProtocol
-draw_help	Saver/app.py	/^def draw_help(lines, current):$/;"	f
-draw_help	p.py	/^def draw_help():$/;"	f
-draw_help	screen.py	/^def draw_help():$/;"	f
+delete_object	OOP/final_project/Logic.py	/^    def delete_object(self, obj):$/;"	m	class:GameEngine
+draw	OOP/final_project/Objects.py	/^    def draw(self, display):$/;"	m	class:AbstractObject
+draw	OOP/final_project/Objects.py	/^    def draw(self, display):$/;"	m	class:Ally
+draw	OOP/final_project/Objects.py	/^    def draw(self, display):$/;"	m	class:Creature
+draw	OOP/final_project/ScreenEngine.py	/^    def draw(self, canvas):$/;"	m	class:GameSurface
+draw	OOP/final_project/ScreenEngine.py	/^    def draw(self, canvas):$/;"	m	class:HelpWindow
+draw	OOP/final_project/ScreenEngine.py	/^    def draw(self, canvas):$/;"	m	class:InfoWindow
+draw	OOP/final_project/ScreenEngine.py	/^    def draw(self, canvas):$/;"	m	class:ProgressBar
+draw	OOP/final_project/ScreenEngine.py	/^    def draw(self, canvas):$/;"	m	class:ScreenHandle
+draw_help	DivingIntoPython/Saver/app.py	/^def draw_help(lines, current):$/;"	f
+draw_help	OOP/p.py	/^def draw_help():$/;"	f
+draw_help	OOP/screen.py	/^def draw_help():$/;"	f
 draw_help	tmp/screen.py	/^def draw_help():$/;"	f
-draw_points	Saver/polylines.py	/^    def draw_points(self, display, style="points", width=3):$/;"	m	class:Polyline
-draw_points	p.py	/^    def draw_points(self, points, width=3, color=(255, 255, 255)):$/;"	m	class:Knot
-draw_points	p.py	/^    def draw_points(self, points, width=3, color=(255, 255, 255)):$/;"	m	class:Polyline
-draw_points	screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Knot
-draw_points	screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Polyline
-draw_points	screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
+draw_hero	OOP/final_project/ScreenEngine.py	/^    def draw_hero(self):$/;"	m	class:GameSurface
+draw_map	OOP/final_project/ScreenEngine.py	/^    def draw_map(self):$/;"	m	class:GameSurface
+draw_object	OOP/final_project/ScreenEngine.py	/^    def draw_object(self, sprite, coord):$/;"	m	class:GameSurface
+draw_points	DivingIntoPython/Saver/polylines.py	/^    def draw_points(self, display, style="points", width=3):$/;"	m	class:Polyline
+draw_points	OOP/p.py	/^    def draw_points(self, points, width=3, color=(255, 255, 255)):$/;"	m	class:Knot
+draw_points	OOP/p.py	/^    def draw_points(self, points, width=3, color=(255, 255, 255)):$/;"	m	class:Polyline
+draw_points	OOP/screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Knot
+draw_points	OOP/screen.py	/^    def draw_points(self, style="points", width=3, color=(255, 255, 255)):$/;"	m	class:Polyline
+draw_points	OOP/screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
 draw_points	tmp/screen.py	/^def draw_points(points, style="points", width=3, color=(255, 255, 255)):$/;"	f
-e	r1.py	/^e = EvilEye(h)$/;"	v
-e1	r1.py	/^e1 = EvilEye(e)$/;"	v
-e2	r1.py	/^e2 = EvilEye(e1)$/;"	v
-e3	r1.py	/^e3 = EvilEye(e2)$/;"	v
-e4	r1.py	/^e4 = EvilEye(e3)$/;"	v
+exp	OOP/final_project/Objects.py	/^    def exp(self):$/;"	m	class:Effect
+exp	OOP/final_project/Objects.py	/^    def exp(self, value):$/;"	m	class:Effect
 first	DivingIntoPython/comfile.py	/^first = os.path.join(tempfile.gettempdir(), 'first')$/;"	v
-fromPoint	screen.py	/^    def fromPoint(cls, p):$/;"	m	class:Vec2d
-gameDisplay	Saver/app.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
-gameDisplay	p.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
-gameDisplay	screen.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
-generate_lights	adapter.py	/^    def generate_lights(self):$/;"	f
+floor1	OOP/final_project/Service.py	/^floor1 = [0]$/;"	v
+floor2	OOP/final_project/Service.py	/^floor2 = [0]$/;"	v
+floor3	OOP/final_project/Service.py	/^floor3 = [0]$/;"	v
+fromPoint	OOP/screen.py	/^    def fromPoint(cls, p):$/;"	m	class:Vec2d
+from_yaml	OOP/final_project/Service.py	/^    def from_yaml(cls, loader, node):$/;"	m	class:MapFactory
+from_yaml	OOP/yaml.py	/^    def from_yaml(Class, loader, node):$/;"	m	class:AbstractLevel
+gameDisplay	DivingIntoPython/Saver/app.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
+gameDisplay	OOP/final_project/Main.py	/^gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
+gameDisplay	OOP/p.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
+gameDisplay	OOP/screen.py	/^    gameDisplay = pygame.display.set_mode(SCREEN_DIM)$/;"	v
+game_process	OOP/final_project/Logic.py	/^    game_process = True$/;"	v	class:GameEngine
+generate_lights	OOP/adapter.py	/^    def generate_lights(self):$/;"	m	class:Light
 get	DivingIntoPython/client.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/client_my.py	/^    def get(self, key):$/;"	m	class:Client
 get	DivingIntoPython/decorator_prim.py	/^def get(key):$/;"	f
-get_answer	oop.py	/^    def get_answer(self):$/;"	m	class:Base
+get_answer	OOP/oop.py	/^    def get_answer(self):$/;"	m	class:Base
 get_body_volume	DivingIntoPython/sol_car.py	/^    def get_body_volume(self):$/;"	m	class:Truck
 get_car_list	DivingIntoPython/sol_car.py	/^def get_car_list(csv_filename):$/;"	f
 get_data	DivingIntoPython/decorator.py	/^def get_data():$/;"	f
 get_data	DivingIntoPython/decorator_prim.py	/^def get_data():$/;"	f
-get_knot	p.py	/^    def get_knot(self):$/;"	m	class:Knot
-get_knot	screen.py	/^    def get_knot(self, count):$/;"	m	class:Knot
+get_friends	friends.py	/^def get_friends(user_id):$/;"	f
+get_knot	OOP/p.py	/^    def get_knot(self):$/;"	m	class:Knot
+get_knot	OOP/screen.py	/^    def get_knot(self, count):$/;"	m	class:Knot
 get_knot	tmp/screen.py	/^def get_knot(points, count):$/;"	f
-get_lightening	adapter.py	/^    def get_lightening(self, light_mapper):$/;"	f
-get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:A
-get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:B
-get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:Base
-get_loss	oop.py	/^    def get_loss(self):$/;"	m	class:C
-get_negative_effects	deco.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractNegative
-get_negative_effects	deco.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
-get_negative_effects	decomb.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractEffect
-get_negative_effects	decomb.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
-get_negative_effects	decomb.py	/^    def get_negative_effects(self):$/;"	m	class:Curse
-get_negative_effects	decomb.py	/^    def get_negative_effects(self):$/;"	m	class:EvilEye
-get_negative_effects	decomb.py	/^    def get_negative_effects(self):$/;"	m	class:Weakness
-get_negative_effects	test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractNegative
-get_negative_effects	test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
-get_negative_effects	test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:Hero
+get_lightening	OOP/adapter.py	/^    def get_lightening(self, light_mapper):$/;"	m	class:System
+get_loss	OOP/oop.py	/^    def get_loss(self):$/;"	m	class:A
+get_loss	OOP/oop.py	/^    def get_loss(self):$/;"	m	class:B
+get_loss	OOP/oop.py	/^    def get_loss(self):$/;"	m	class:Base
+get_loss	OOP/oop.py	/^    def get_loss(self):$/;"	m	class:C
+get_map	OOP/af.py	/^        def get_map(self):$/;"	m	class:EasyLevel.Map
+get_map	OOP/af.py	/^        def get_map(self):$/;"	m	class:HardLevel.Map
+get_map	OOP/af.py	/^        def get_map(self):$/;"	m	class:MediumLevel.Map
+get_map	OOP/af.py	/^    def get_map(Cls):$/;"	m	class:AbstractLevel
+get_map	OOP/final_project/Service.py	/^        def get_map(self):$/;"	m	class:EmptyMap.Map
+get_map	OOP/final_project/Service.py	/^        def get_map(self):$/;"	m	class:EndMap.Map
+get_map	OOP/final_project/Service.py	/^        def get_map(self):$/;"	m	class:RandomMap.Map
+get_map	OOP/final_project/Service.py	/^        def get_map(self):$/;"	m	class:SpecialMap.Map
+get_map	OOP/yaml.py	/^        def get_map(self):$/;"	m	class:EasyLevel.Map
+get_map	OOP/yaml.py	/^        def get_map(self):$/;"	m	class:HardLevel.Map
+get_map	OOP/yaml.py	/^        def get_map(self):$/;"	m	class:MediumLevel.Map
+get_map	OOP/yaml.py	/^    def get_map(Class):$/;"	m	class:AbstractLevel
+get_negative_effects	OOP/deco.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractNegative
+get_negative_effects	OOP/deco.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
+get_negative_effects	OOP/decomb.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractEffect
+get_negative_effects	OOP/decomb.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
+get_negative_effects	OOP/decomb.py	/^    def get_negative_effects(self):$/;"	m	class:Curse
+get_negative_effects	OOP/decomb.py	/^    def get_negative_effects(self):$/;"	m	class:EvilEye
+get_negative_effects	OOP/decomb.py	/^    def get_negative_effects(self):$/;"	m	class:Weakness
+get_negative_effects	OOP/test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractNegative
+get_negative_effects	OOP/test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:AbstractPositive
+get_negative_effects	OOP/test_decorator.py	/^    def get_negative_effects(self):$/;"	m	class:Hero
+get_objects	OOP/af.py	/^        def get_objects(self, map):$/;"	m	class:EasyLevel.Objects
+get_objects	OOP/af.py	/^        def get_objects(self, map):$/;"	m	class:HardLevel.Objects
+get_objects	OOP/af.py	/^        def get_objects(self, map):$/;"	m	class:MediumLevel.Objects
+get_objects	OOP/af.py	/^    def get_objects(Cls):$/;"	m	class:AbstractLevel
+get_objects	OOP/final_project/Service.py	/^        def get_objects(self, _map):$/;"	m	class:EmptyMap.Objects
+get_objects	OOP/final_project/Service.py	/^        def get_objects(self, _map):$/;"	m	class:EndMap.Objects
+get_objects	OOP/final_project/Service.py	/^        def get_objects(self, _map):$/;"	m	class:RandomMap.Objects
+get_objects	OOP/final_project/Service.py	/^        def get_objects(self, _map):$/;"	m	class:SpecialMap.Objects
+get_objects	OOP/yaml.py	/^            def get_objects(self, _map):$/;"	m	class:EasyLevel.Objects
+get_objects	OOP/yaml.py	/^            def get_objects(self, _map):$/;"	m	class:HardLevel.Objects
+get_objects	OOP/yaml.py	/^            def get_objects(self, _map):$/;"	m	class:MediumLevel.Objects
+get_objects	OOP/yaml.py	/^    def get_objects(Class):$/;"	m	class:AbstractLevel
+get_objects_grid	OOP/adapt.py	/^    def get_objects_grid(self, desc, grid):$/;"	m	class:MappingAdapter
 get_photo_file_ext	DivingIntoPython/sol_car.py	/^    def get_photo_file_ext(self):$/;"	m	class:CarBase
-get_point	p.py	/^    def get_point(self, points, alpha, deg=None):$/;"	m	class:Knot
-get_point	screen.py	/^    def get_point(self, points, alpha, deg=None):$/;"	m	class:Knot
+get_point	OOP/p.py	/^    def get_point(self, points, alpha, deg=None):$/;"	m	class:Knot
+get_point	OOP/screen.py	/^    def get_point(self, points, alpha, deg=None):$/;"	m	class:Knot
 get_point	tmp/screen.py	/^def get_point(points, alpha, deg=None):$/;"	f
-get_points	p.py	/^    def get_points(self, base_points):$/;"	m	class:Knot
-get_points	screen.py	/^    def get_points(self, base_points, count):$/;"	m	class:Knot
+get_points	OOP/p.py	/^    def get_points(self, base_points):$/;"	m	class:Knot
+get_points	OOP/screen.py	/^    def get_points(self, base_points, count):$/;"	m	class:Knot
 get_points	tmp/screen.py	/^def get_points(base_points, count):$/;"	f
-get_positive_effects	deco.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
-get_positive_effects	deco.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractPositive
-get_positive_effects	decomb.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractEffect
-get_positive_effects	decomb.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
-get_positive_effects	decomb.py	/^    def get_positive_effects(self):$/;"	m	class:Berserk
-get_positive_effects	decomb.py	/^    def get_positive_effects(self):$/;"	m	class:Blessing
-get_positive_effects	test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
-get_positive_effects	test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractPositive
-get_positive_effects	test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:Hero
-get_pre	oop.py	/^    def get_pre(self):$/;"	m	class:B
-get_rec	oop.py	/^    def get_rec(self):$/;"	m	class:B
-get_score	oop.py	/^    def get_score(self):$/;"	m	class:A
-get_score	oop.py	/^    def get_score(self):$/;"	m	class:B
-get_score	oop.py	/^    def get_score(self):$/;"	m	class:Base
-get_score	oop.py	/^    def get_score(self):$/;"	m	class:C
-get_stats	deco.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:Berserk
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:Blessing
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:Curse
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:EvilEye
-get_stats	decomb.py	/^    def get_stats(self):$/;"	m	class:Weakness
-get_stats	test_decorator.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
-get_stats	test_decorator.py	/^    def get_stats(self):$/;"	m	class:Hero
-h	r.py	/^h = Hero()$/;"	v
-h	r1.py	/^h = Hero()$/;"	v
-hero	test_decorator.py	/^    hero = Hero()$/;"	v
-hue	Saver/app.py	/^        hue = (hue + 1) % 360$/;"	v
-hue	Saver/app.py	/^    hue = 0$/;"	v
-hue	p.py	/^        hue = (hue + 1) % 360$/;"	v
-hue	p.py	/^    hue = 0$/;"	v
-hue	screen.py	/^        hue = (hue + 1) % 360$/;"	v
-hue	screen.py	/^    hue = 0$/;"	v
+get_positive_effects	OOP/deco.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
+get_positive_effects	OOP/deco.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractPositive
+get_positive_effects	OOP/decomb.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractEffect
+get_positive_effects	OOP/decomb.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
+get_positive_effects	OOP/decomb.py	/^    def get_positive_effects(self):$/;"	m	class:Berserk
+get_positive_effects	OOP/decomb.py	/^    def get_positive_effects(self):$/;"	m	class:Blessing
+get_positive_effects	OOP/test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractNegative
+get_positive_effects	OOP/test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:AbstractPositive
+get_positive_effects	OOP/test_decorator.py	/^    def get_positive_effects(self):$/;"	m	class:Hero
+get_pre	OOP/oop.py	/^    def get_pre(self):$/;"	m	class:B
+get_rec	OOP/oop.py	/^    def get_rec(self):$/;"	m	class:B
+get_score	OOP/oop.py	/^    def get_score(self):$/;"	m	class:A
+get_score	OOP/oop.py	/^    def get_score(self):$/;"	m	class:B
+get_score	OOP/oop.py	/^    def get_score(self):$/;"	m	class:Base
+get_score	OOP/oop.py	/^    def get_score(self):$/;"	m	class:C
+get_stats	OOP/deco.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:Berserk
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:Blessing
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:Curse
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:EvilEye
+get_stats	OOP/decomb.py	/^    def get_stats(self):$/;"	m	class:Weakness
+get_stats	OOP/test_decorator.py	/^    def get_stats(self):$/;"	m	class:AbstractEffect
+get_stats	OOP/test_decorator.py	/^    def get_stats(self):$/;"	m	class:Hero
+get_user_id	friends.py	/^def get_user_id(uid):$/;"	f
+gold	OOP/final_project/Objects.py	/^    def gold(self):$/;"	m	class:Effect
+gold	OOP/final_project/Objects.py	/^    def gold(self, value):$/;"	m	class:Effect
+h	OOP/r.py	/^h = Hero()$/;"	v
+handle	OOP/chain.py	/^    def handle(self, obj, event):$/;"	m	class:FloatHandler
+handle	OOP/chain.py	/^    def handle(self, obj, event):$/;"	m	class:IntHandler
+handle	OOP/chain.py	/^    def handle(self, obj, event):$/;"	m	class:NullHandler
+handle	OOP/chain.py	/^    def handle(self, obj, event):$/;"	m	class:StrHandler
+hero	OOP/final_project/Logic.py	/^    hero = None$/;"	v	class:GameEngine
+hero	OOP/test_decorator.py	/^    hero = Hero()$/;"	v
+hp	OOP/final_project/Objects.py	/^    def hp(self):$/;"	m	class:Effect
+hp	OOP/final_project/Objects.py	/^    def hp(self, value):$/;"	m	class:Effect
+hue	DivingIntoPython/Saver/app.py	/^        hue = (hue + 1) % 360$/;"	v
+hue	DivingIntoPython/Saver/app.py	/^    hue = 0$/;"	v
+hue	OOP/p.py	/^        hue = (hue + 1) % 360$/;"	v
+hue	OOP/p.py	/^    hue = 0$/;"	v
+hue	OOP/screen.py	/^        hue = (hue + 1) % 360$/;"	v
+hue	OOP/screen.py	/^    hue = 0$/;"	v
 inner	DivingIntoPython/decorator.py	/^    def inner(*args, **kwargs ):$/;"	f	function:to_json
-int_pair	Saver/vector.py	/^    def int_pair(self):$/;"	m	class:Vec2d
-int_pair	p.py	/^    def int_pair(self):$/;"	m	class:Vec2d
-int_pair	screen.py	/^    def int_pair(self):$/;"	m	class:Vec2d
-k	screen.py	/^                k = k + Vec2d.fromPoint(event.pos)$/;"	v
-k	screen.py	/^    k = Knot(steps)$/;"	v
-knot	p.py	/^                    knot = Knot(steps)$/;"	v
-knot	p.py	/^    knot = Knot(steps)$/;"	v
-knots	Saver/app.py	/^                    knots = [Knot() for i in range(9)]$/;"	v
-knots	Saver/app.py	/^    knots = [Polyline()] + [Knot() for i in range(9)]$/;"	v
-len	p.py	/^    def len(self, x):$/;"	m	class:Vec2d
+int_pair	DivingIntoPython/Saver/vector.py	/^    def int_pair(self):$/;"	m	class:Vec2d
+int_pair	OOP/p.py	/^    def int_pair(self):$/;"	m	class:Vec2d
+int_pair	OOP/screen.py	/^    def int_pair(self):$/;"	m	class:Vec2d
+interact	OOP/final_project/Logic.py	/^    def interact(self):$/;"	m	class:GameEngine
+interact	OOP/final_project/Objects.py	/^    def interact(self, engine, hero):$/;"	m	class:Ally
+interact	OOP/final_project/Objects.py	/^    def interact(self, engine, hero):$/;"	m	class:Enemy
+interact	OOP/final_project/Objects.py	/^    def interact(self, engine, hero):$/;"	m	class:Interactive
+k	OOP/screen.py	/^                k = k + Vec2d.fromPoint(event.pos)$/;"	v
+k	OOP/screen.py	/^    k = Knot(steps)$/;"	v
+knot	OOP/p.py	/^                    knot = Knot(steps)$/;"	v
+knot	OOP/p.py	/^    knot = Knot(steps)$/;"	v
+knots	DivingIntoPython/Saver/app.py	/^                    knots = [Knot() for i in range(9)]$/;"	v
+knots	DivingIntoPython/Saver/app.py	/^    knots = [Polyline()] + [Knot() for i in range(9)]$/;"	v
+len	OOP/p.py	/^    def len(self, x):$/;"	m	class:Vec2d
 length	tmp/screen.py	/^def length(x):$/;"	f
-lighten	adapter.py	/^    def lighten(self, grid):$/;"	f
+level	OOP/final_project/Logic.py	/^    level = -1$/;"	v	class:GameEngine
+level	OOP/final_project/Objects.py	/^    def level(self):$/;"	m	class:Effect
+level	OOP/final_project/Objects.py	/^    def level(self, value):$/;"	m	class:Effect
+level_up	OOP/final_project/Objects.py	/^    def level_up(self):$/;"	m	class:Hero
+lighten	OOP/adapt.py	/^    def lighten(self, grid):$/;"	m	class:MappingAdapter
+lighten	OOP/adapter.py	/^    def lighten(self, grid):$/;"	m	class:MappingAdapter
+load_map	OOP/final_project/Logic.py	/^    def load_map(self, game_map):$/;"	m	class:GameEngine
+map	OOP/final_project/Logic.py	/^    map = None$/;"	v	class:GameEngine
+max_hp	OOP/final_project/Objects.py	/^    def max_hp(self):$/;"	m	class:Effect
+max_hp	OOP/final_project/Objects.py	/^    def max_hp(self, value):$/;"	m	class:Effect
+move	OOP/final_project/Main.py	/^            move = actions[np.argmax(answer)]()$/;"	v
+move_down	OOP/final_project/Logic.py	/^    def move_down(self):$/;"	m	class:GameEngine
+move_left	OOP/final_project/Logic.py	/^    def move_left(self):$/;"	m	class:GameEngine
+move_right	OOP/final_project/Logic.py	/^    def move_right(self):$/;"	m	class:GameEngine
+move_up	OOP/final_project/Logic.py	/^    def move_up(self):$/;"	m	class:GameEngine
 mul	tmp/screen.py	/^def mul(v, k):$/;"	f
 namespace	DivingIntoPython/storage.py	/^    namespace = parser.parse_args()$/;"	v
 new_obj	DivingIntoPython/comfile.py	/^new_obj = obj1 + obj2 $/;"	v
+notify	OOP/final_project/Logic.py	/^    def notify(self, message):$/;"	m	class:GameEngine
+notify	OOP/observer.py	/^    def notify(self, message):$/;"	m	class:ObservableEngine
 obj	DivingIntoPython/comfile.py	/^obj = File(storage_path)$/;"	v
 obj1	DivingIntoPython/comfile.py	/^obj1 = File(first)$/;"	v
 obj2	DivingIntoPython/comfile.py	/^obj2 = File(second)$/;"	v
+objects	OOP/final_project/Logic.py	/^    objects = []$/;"	v	class:GameEngine
 parse_data	DivingIntoPython/client_my.py	/^    def parse_data(self,data):$/;"	m	class:Client
 parser	DivingIntoPython/decorator_prim.py	/^    parser = argparse.ArgumentParser()$/;"	v
 parser	DivingIntoPython/storage.py	/^    parser = createParser()$/;"	v
-pause	Saver/app.py	/^                    pause = not pause$/;"	v
-pause	Saver/app.py	/^    pause = True$/;"	v
-pause	p.py	/^                    pause = not pause$/;"	v
-pause	p.py	/^    pause = True$/;"	v
-pause	screen.py	/^                    pause = not pause$/;"	v
-pause	screen.py	/^    pause = True$/;"	v
+pause	DivingIntoPython/Saver/app.py	/^                    pause = not pause$/;"	v
+pause	DivingIntoPython/Saver/app.py	/^    pause = True$/;"	v
+pause	OOP/p.py	/^                    pause = not pause$/;"	v
+pause	OOP/p.py	/^    pause = True$/;"	v
+pause	OOP/screen.py	/^                    pause = not pause$/;"	v
+pause	OOP/screen.py	/^    pause = True$/;"	v
 pid	DivingIntoPython/pid.py	/^pid = os.getpid()$/;"	v
-points	screen.py	/^                    points = []$/;"	v
-points	screen.py	/^    points = []$/;"	v
-polyline	p.py	/^                    polyline = Polyline()$/;"	v
-polyline	p.py	/^    polyline = Polyline()$/;"	v
+points	OOP/screen.py	/^                    points = []$/;"	v
+points	OOP/screen.py	/^    points = []$/;"	v
+polyline	OOP/p.py	/^                    polyline = Polyline()$/;"	v
+polyline	OOP/p.py	/^    polyline = Polyline()$/;"	v
+position	OOP/final_project/Objects.py	/^    def position(self):$/;"	m	class:Effect
+position	OOP/final_project/Objects.py	/^    def position(self, value):$/;"	m	class:Effect
+prev_score	OOP/final_project/Main.py	/^            prev_score = engine.score$/;"	v
 process_data	DivingIntoPython/server.py	/^    def process_data(self, data):$/;"	m	class:ClientServerProtocol
 put	DivingIntoPython/client.py	/^    def put(self, key, value, timestamp=None):$/;"	m	class:Client
 put	DivingIntoPython/client_my.py	/^    def put(self, key, value, timestamp=str(int(time.time()))):$/;"	m	class:Client
 put	DivingIntoPython/decorator_prim.py	/^def put(key, value):$/;"	f
 read	DivingIntoPython/fileobj.py	/^    def read(self):$/;"	m	class:File
 read	DivingIntoPython/solution.py	/^    def read(self):$/;"	m	class:FileReader
-remove_point	Saver/polylines.py	/^    def remove_point(self):$/;"	m	class:Knot
-remove_point	Saver/polylines.py	/^    def remove_point(self):$/;"	m	class:Polyline
+reload_game	OOP/final_project/Service.py	/^def reload_game(engine, hero):$/;"	f
+remove_effect	OOP/final_project/Service.py	/^def remove_effect(engine, hero):$/;"	f
+remove_point	DivingIntoPython/Saver/polylines.py	/^    def remove_point(self):$/;"	m	class:Knot
+remove_point	DivingIntoPython/Saver/polylines.py	/^    def remove_point(self):$/;"	m	class:Polyline
+res	friends.py	/^    res = calc_age('mashka_po')$/;"	v
+restore_hp	OOP/final_project/Service.py	/^def restore_hp(engine, hero):$/;"	f
+reward	OOP/final_project/Main.py	/^            reward = engine.score - prev_score$/;"	v
 run	DivingIntoPython/test_server.py	/^def run(host, port):$/;"	f
 run_server	DivingIntoPython/server.py	/^def run_server(host, port):$/;"	f
+score	OOP/final_project/Logic.py	/^    score = 0.$/;"	v	class:GameEngine
 second	DivingIntoPython/comfile.py	/^second = os.path.join(tempfile.gettempdir(),'second')$/;"	v
-set_dim	adapter.py	/^    def set_dim(self, dim):$/;"	f
-set_lights	adapter.py	/^    def set_lights(self, lights):$/;"	f
-set_obstacles	adapter.py	/^    def set_obstacles(self, obstacles):$/;"	f
-set_points	Saver/polylines.py	/^    def set_points(self, screen_width, screen_height, mul):$/;"	m	class:Knot
-set_points	Saver/polylines.py	/^    def set_points(self, screen_width, screen_height, mul):$/;"	m	class:Polyline
-set_points	p.py	/^    def set_points(self):$/;"	m	class:Knot
-set_points	p.py	/^    def set_points(self):$/;"	m	class:Polyline
-set_points	screen.py	/^    def set_points(self, alter_speed=0):$/;"	m	class:Polyline
+service_init	OOP/final_project/Service.py	/^def service_init(sprite_size, full=True):$/;"	f
+set_dim	OOP/adapter.py	/^    def set_dim(self, dim):$/;"	m	class:Light
+set_lights	OOP/adapter.py	/^    def set_lights(self, lights):$/;"	m	class:Light
+set_obstacles	OOP/adapter.py	/^    def set_obstacles(self, obstacles):$/;"	m	class:Light
+set_points	DivingIntoPython/Saver/polylines.py	/^    def set_points(self, screen_width, screen_height, mul):$/;"	m	class:Knot
+set_points	DivingIntoPython/Saver/polylines.py	/^    def set_points(self, screen_width, screen_height, mul):$/;"	m	class:Polyline
+set_points	OOP/p.py	/^    def set_points(self):$/;"	m	class:Knot
+set_points	OOP/p.py	/^    def set_points(self):$/;"	m	class:Polyline
+set_points	OOP/screen.py	/^    def set_points(self, alter_speed=0):$/;"	m	class:Polyline
 set_points	tmp/screen.py	/^def set_points(points, speeds):$/;"	f
-show_help	Saver/app.py	/^                    show_help = not show_help$/;"	v
-show_help	Saver/app.py	/^    show_help = False$/;"	v
-show_help	p.py	/^                    show_help = not show_help$/;"	v
-show_help	p.py	/^    show_help = False$/;"	v
-show_help	screen.py	/^                    show_help = not show_help$/;"	v
-show_help	screen.py	/^    show_help = False$/;"	v
-speed	Saver/app.py	/^    speed = 1$/;"	v
-speeds	screen.py	/^                    speeds = []$/;"	v
-speeds	screen.py	/^    speeds = []$/;"	v
-steps	p.py	/^    steps = 35$/;"	v
-steps	screen.py	/^    steps = 35$/;"	v
+show_help	DivingIntoPython/Saver/app.py	/^                    show_help = not show_help$/;"	v
+show_help	DivingIntoPython/Saver/app.py	/^    show_help = False$/;"	v
+show_help	OOP/final_project/Logic.py	/^    show_help = False$/;"	v	class:GameEngine
+show_help	OOP/p.py	/^                    show_help = not show_help$/;"	v
+show_help	OOP/p.py	/^    show_help = False$/;"	v
+show_help	OOP/screen.py	/^                    show_help = not show_help$/;"	v
+show_help	OOP/screen.py	/^    show_help = False$/;"	v
+size	OOP/final_project/Main.py	/^                    size = size + 1$/;"	v
+size	OOP/final_project/Main.py	/^                    size = size - 1$/;"	v
+size	OOP/final_project/Main.py	/^size = 60$/;"	v
+speed	DivingIntoPython/Saver/app.py	/^    speed = 1$/;"	v
+speeds	OOP/screen.py	/^                    speeds = []$/;"	v
+speeds	OOP/screen.py	/^    speeds = []$/;"	v
+sprite	OOP/final_project/Objects.py	/^    def sprite(self):$/;"	m	class:Effect
+state	OOP/final_project/Main.py	/^            state = pygame.surfarray.array3d(gameDisplay)$/;"	v
+steps	OOP/p.py	/^    steps = 35$/;"	v
+steps	OOP/screen.py	/^    steps = 35$/;"	v
 storage_path	DivingIntoPython/comfile.py	/^storage_path = os.path.join(tempfile.gettempdir(),'storage.data')$/;"	v
 storage_path	DivingIntoPython/decorator_prim.py	/^storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
 storage_path	DivingIntoPython/storage.py	/^    storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')$/;"	v
 sub	tmp/screen.py	/^def sub(x, y):$/;"	f
-test_many_multipliers	factorize.py	/^    def test_many_multipliers(self):$/;"	m	class:TestFactorize
-test_negative	factorize.py	/^    def test_negative(self):$/;"	m	class:TestFactorize
-test_simple_numbers	factorize.py	/^    def test_simple_numbers(self):$/;"	m	class:TestFactorize
-test_two_simple_multipliers	factorize.py	/^    def test_two_simple_multipliers(self):$/;"	m	class:TestFactorize
-test_wrong_types_raise_exception	factorize.py	/^    def test_wrong_types_raise_exception(self):$/;"	m	class:TestFactorize
-test_zero_and_one_cases	factorize.py	/^    def test_zero_and_one_cases(self):$/;"	m	class:TestFactorize
+subscribe	OOP/final_project/Logic.py	/^    def subscribe(self, obj):$/;"	m	class:GameEngine
+subscribe	OOP/observer.py	/^    def subscribe(self, subscriber):$/;"	m	class:ObservableEngine
+subscribers	OOP/final_project/Logic.py	/^    subscribers = set()$/;"	v	class:GameEngine
+test_many_multipliers	OOP/factorize.py	/^    def test_many_multipliers(self):$/;"	m	class:TestFactorize
+test_negative	OOP/factorize.py	/^    def test_negative(self):$/;"	m	class:TestFactorize
+test_simple_numbers	OOP/factorize.py	/^    def test_simple_numbers(self):$/;"	m	class:TestFactorize
+test_two_simple_multipliers	OOP/factorize.py	/^    def test_two_simple_multipliers(self):$/;"	m	class:TestFactorize
+test_wrong_types_raise_exception	OOP/factorize.py	/^    def test_wrong_types_raise_exception(self):$/;"	m	class:TestFactorize
+test_zero_and_one_cases	OOP/factorize.py	/^    def test_zero_and_one_cases(self):$/;"	m	class:TestFactorize
 to_json	DivingIntoPython/decorator.py	/^def to_json(func):$/;"	f
+unsubscribe	OOP/final_project/Logic.py	/^    def unsubscribe(self, obj):$/;"	m	class:GameEngine
+unsubscribe	OOP/observer.py	/^    def unsubscribe(self, subscriber):$/;"	m	class:ObservableEngine
+update	OOP/final_project/ScreenEngine.py	/^    def update(self, value):$/;"	m	class:InfoWindow
+update	OOP/observer.py	/^    def update(self, message):$/;"	m	class:AbstractObserver
+update	OOP/observer.py	/^    def update(self, message):$/;"	m	class:FullNotificationPrinter
+update	OOP/observer.py	/^    def update(self, message):$/;"	m	class:ShortNotificationPrinter
 vec	tmp/screen.py	/^def vec(x, y):$/;"	f
-visio	r.py	/^def visio(d):$/;"	f
-working	Saver/app.py	/^                    working = False$/;"	v
-working	Saver/app.py	/^                working = False$/;"	v
-working	Saver/app.py	/^    working = True$/;"	v
-working	p.py	/^                    working = False$/;"	v
-working	p.py	/^                working = False$/;"	v
-working	p.py	/^    working = True$/;"	v
-working	screen.py	/^                    working = False$/;"	v
-working	screen.py	/^                working = False$/;"	v
-working	screen.py	/^    working = True$/;"	v
+visio	OOP/r.py	/^def visio(d):$/;"	f
+wall	OOP/final_project/Service.py	/^wall = [0]$/;"	v
+working	DivingIntoPython/Saver/app.py	/^                    working = False$/;"	v
+working	DivingIntoPython/Saver/app.py	/^                working = False$/;"	v
+working	DivingIntoPython/Saver/app.py	/^    working = True$/;"	v
+working	OOP/final_project/Logic.py	/^    working = True$/;"	v	class:GameEngine
+working	OOP/p.py	/^                    working = False$/;"	v
+working	OOP/p.py	/^                working = False$/;"	v
+working	OOP/p.py	/^    working = True$/;"	v
+working	OOP/screen.py	/^                    working = False$/;"	v
+working	OOP/screen.py	/^                working = False$/;"	v
+working	OOP/screen.py	/^    working = True$/;"	v
 write	DivingIntoPython/fileobj.py	/^    def write(self, content):$/;"	m	class:File
-x	screen.py	/^    x=0$/;"	v
+x	OOP/screen.py	/^    x=0$/;"	v
+yaml_tag	OOP/final_project/Service.py	/^    yaml_tag = "!empty_map"$/;"	v	class:EmptyMap
+yaml_tag	OOP/final_project/Service.py	/^    yaml_tag = "!end_map"$/;"	v	class:EndMap
+yaml_tag	OOP/final_project/Service.py	/^    yaml_tag = "!random_map"$/;"	v	class:RandomMap
+yaml_tag	OOP/final_project/Service.py	/^    yaml_tag = "!special_map"$/;"	v	class:SpecialMap
+yaml_tag	OOP/yaml.py	/^    yaml_tag = '!easy_level'$/;"	v	class:EasyLevel
+yaml_tag	OOP/yaml.py	/^    yaml_tag = '!hard_level'$/;"	v	class:HardLevel
+yaml_tag	OOP/yaml.py	/^    yaml_tag = '!medium_level'$/;"	v	class:MediumLevel
