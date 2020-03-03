@@ -1,37 +1,11 @@
-import re
-from regexp  import calculate
+import requests
+from decimal import Decimal
+from currency import convert
 
 
-def findall(regexp):
-    text = """
-    a=1
-    a=+1
-    a=-1
-    a=b
-    a=b+100
-    a=b-100
-    
-    b+=10
-    b+=+10
-    b+=-10
-    b+=b
-    b+=b+100
-    b+=b-100
-    
-    c-=101
-    c-=+101
-    c-=-101
-    c-=b
-    c-=b+101
-    c-=b-101
-    """
-
-    return re.findall(regexp, text)
-
-
-result = calculate({'a': 1, 'b': 2, 'c': 3}, findall)
-correct = {"a": -98, "b": 196, "c": -686}
+correct = Decimal('3754.8057')
+result = convert(Decimal("1000.1000"), 'RUR', 'JPY', "17/02/2005", requests)
 if result == correct:
-    print ("Correct")
+    print("Correct")
 else:
-    print ("Incorrect: %s != %s" % (result, correct))
+    print("Incorrect: %s != %s" % (result, correct))
