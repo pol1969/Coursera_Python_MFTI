@@ -17,6 +17,9 @@ b64_auth_str = base64.b64encode(auth_str.encode())
 headers = {'Authorization': 'Basic %s' % b64_auth_str.decode()}
 
 content_res = requests.put(url1, headers=headers, data=data)
+f = eval(content_res.text)
+print(f['answer'])
 
-print(content_res.status_code)
-print(content_res.text)
+filehandle = open('answer.txt', 'w')  
+filehandle.write(f['answer'])  
+filehandle.close()  
