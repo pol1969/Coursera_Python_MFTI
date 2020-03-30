@@ -1,9 +1,10 @@
 import json
+from django.test import TestCase
 
 from somemart.models import Item, Review
 
 
-class TestViews(object):
+class TestViews(TestCase):
 
     def test_post_item(self, client, db):
         """/api/v1/goods/ (POST) сохраняет товар в базе."""
