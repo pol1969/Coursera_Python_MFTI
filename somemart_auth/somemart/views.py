@@ -1,5 +1,3 @@
-#import json
-#
 #from django.http import HttpResponse, JsonResponse
 #from django.views import View
 #
@@ -10,7 +8,7 @@
 #    """View для создания товара."""
 #
 #    def post(self, request):
-#        # Здесь должен быть ваш код
+#	# Здесь должен быть ваш код
 #        return JsonResponse(data, status=201)
 #
 #
@@ -18,7 +16,7 @@
 #    """View для создания отзыва о товаре."""
 #
 #    def post(self, request, item_id):
-#        # Здесь должен быть ваш код
+#	# Здесь должен быть ваш код
 #        return JsonResponse(data, status=201)
 #
 #
@@ -30,121 +28,69 @@
 #    """
 #
 #    def get(self, request, item_id):
-#        # Здесь должен быть ваш код
+#	# Здесь должен быть ваш код
 #        return JsonResponse(data, status=200)
 #
 
-import json
+
+import base64
  
 from django import forms
 from django.http import HttpResponse, JsonResponse
 from django.views import View
-from django.views.decorators.csrf import csrf_exempt
 from django.forms.models import model_to_dict
+from django.contrib.auth import authenticate, login
 from django.utils.decorators import method_decorator
-from django.core.validators import RegexValidator 
+from django.views.decorators.csrf import csrf_exempt
+ 
+ 
 from .models import Item, Review
  
  
 class GoodForm(forms.Form):
-    title = forms.CharField(max_length=64,
-            validators = [
-               RegexValidator(
-                    regex='[\D]+',
-                    message='Название не д б цифрой'
-                    ),
-                ]
-            )
-    description = forms.CharField(max_length=1024,
-               validators = [
-               RegexValidator(
-                    regex='[\D]+',
-                    message='Описание не д б цифрой'
-                    ),
-                ]
-            
-            )
+    title = forms.CharField(max_length=64)
+    description = forms.CharField(max_length=1024)
     price = forms.IntegerField(min_value=1, max_value=1000000)
  
  
 class ReviewForm(forms.Form):
-    text = forms.CharField(max_length=1024,
-        validators = [
-                       RegexValidator(
-                            regex='[\D]+',
-                            message='Описание  не д б цифрой'
-                            ),
-                        ]
-                    
-            )
+    text = forms.CharField(max_length=1024)
     grade = forms.IntegerField(min_value=1, max_value=10)
+ 
+ 
+# r = requests.post(url, headers={'Authorization': 'Basic YWxsYWRpbjpvcGVuc2VzYW1l'})
  
  
 @method_decorator(csrf_exempt, name='dispatch')
 class AddItemView(View):
     """View для создания товара."""
-    def is_json(self, myjson):
-        try:
-            json_object = json.loads(myjson)
-            print(json_object)
-        except json.JSONDecodeError as e:
-            print("JSONDecodeError")
-            return False
-        return True
-
+ 
     def post(self, request):
-
-        if not self.is_json(request.body): 
-            return JsonResponse(status=400, data={})
-#        import pdb; pdb.set_trace()
-
-        form = GoodForm(json.loads(request.body))
- #       import pdb; pdb.set_trace()
-        if request.content_type!='application/json':
-            return JsonResponse(status=400, data={})
-        
-        if form.is_valid():
-            cd = form.cleaned_data
- #           import pdb; pdb.set_trace()
-
-            Item.objects.create(**cd)
-            d = {"id":Item.objects.count()}
-            return JsonResponse(d, status=201)
-        return JsonResponse(status=400, data={})
+        coded_str = request.headers['authorization'].split()[1]
+        decoded_str = base64.b64decode(coded_str).decode('utf-8')
+        username, password = decoded_str.split(':')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_staff:
+                return JsonResponse({}, status=201)
+            return JsonResponse({}, status=403)
+        return JsonResponse({}, status=401)
  
  
 @method_decorator(csrf_exempt, name='dispatch')
 class PostReviewView(View):
     """View для создания отзыва о товаре."""
-    def is_json(self, myjson):
-        try:
-            json_object = json.loads(myjson)
-            print(json_object)
-        except json.JSONDecodeError as e:
-            print("JSONDecodeError")
-            return False
-        return True
-
-
  
     def post(self, request, item_id):
- #       import pdb; pdb.set_trace()
-        if not self.is_json(request.body): 
-            return JsonResponse(status=400, data={})
-#
-
         try:
             item = Item.objects.get(id=item_id)
         except Item.DoesNotExist:
             return JsonResponse(status=404, data={})
-#        import pdb; pdb.set_trace()
-        form = ReviewForm(json.loads(request.body))
+        form = ReviewForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             cd['item'] = item
             Review.objects.create(**cd)
-            d = {"id":Review.objects.count()}
-            return JsonResponse(d, status=201)
         return JsonResponse(status=400, data={})
  
  
